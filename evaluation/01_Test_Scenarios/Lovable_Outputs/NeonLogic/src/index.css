@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 280 30% 14%;
+    --foreground: 0 0% 96%;
+
+    --card: 280 25% 18%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 280 25% 18%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 240 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 20% 24%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 280 15% 22%;
+    --muted-foreground: 280 10% 60%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 280 30% 14%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 20% 28%;
+    --input: 280 20% 28%;
+    --ring: 240 100% 50%;
+
+    --radius: 0.5rem;
+
+    --neon-glow: 0 0 8px hsl(240 100% 50% / 0.6), 0 0 20px hsl(240 100% 50% / 0.3);
+    --neon-glow-accent: 0 0 8px hsl(180 100% 50% / 0.6), 0 0 20px hsl(180 100% 50% / 0.3);
+
+    --sidebar-background: 280 30% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 240 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 280 20% 20%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 280 20% 22%;
+    --sidebar-ring: 240 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Focus visible styles */
+  :focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .neon-text {
+    text-shadow: var(--neon-glow);
+  }
+
+  .neon-border {
+    box-shadow: var(--neon-glow);
+    border-color: hsl(var(--primary));
+  }
+
+  .neon-border-accent {
+    box-shadow: var(--neon-glow-accent);
+    border-color: hsl(var(--accent));
+  }
+
+  .btn-neon {
+    @apply px-4 py-2 rounded-md border border-primary bg-primary/10 text-primary-foreground font-medium transition-all duration-300;
+    box-shadow: var(--neon-glow);
+  }
+  .btn-neon:hover {
+    filter: drop-shadow(0 0 12px hsl(240 100% 50% / 0.8));
+    @apply bg-primary/20;
+  }
+
+  .badge-neon {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-primary text-foreground;
+    box-shadow: var(--neon-glow);
+    transition: filter 0.3s;
+  }
+  .badge-neon:hover {
+    filter: drop-shadow(0 0 10px hsl(240 100% 50% / 0.8));
+  }
+
+  .badge-neon-accent {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-accent text-accent;
+    box-shadow: var(--neon-glow-accent);
+    transition: filter 0.3s;
+  }
+
+  .score-circle {
+    @apply inline-flex items-center justify-center rounded-full border-2 border-primary font-bold text-primary;
+    box-shadow: var(--neon-glow);
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  .score-circle-lg {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
+
+  .grid-jigsaw {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 1rem;
+  }
+
+  .scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(280 30% 14% / 0.03) 2px,
+      hsl(280 30% 14% / 0.03) 4px
+    );
+  }
+}

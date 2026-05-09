@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="The future of repairable, modular computing.">
+    <title>Technical Specs | ElementModular</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: Arial, sans-serif; background-color: #F4F4F4; color: #333; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+header { background: #FFF; border-bottom: 1px solid #ddd; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+nav a { margin-left: 20px; text-decoration: none; color: #006387; font-weight: bold; font-size: 0.9rem; }
+nav a.active { text-decoration: underline; }
+.hero { background-color: #df7b10; padding: 60px 5%; display: flex; align-items: center; justify-content: space-between; min-height: 400px; }
+.hero-content { flex: 1; }
+.hero-img { flex: 1; text-align: center; }
+.hero-img img { max-width: 100%; height: auto; object-fit: cover; }
+.btn-primary { background: #006387; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; }
+.mission-bar { background: #FFF; padding: 40px 5%; display: flex; align-items: center; gap: 40px; }
+.product-spotlight { padding: 0; }
+.spotlight-row { display: flex; align-items: center; color: white; padding: 60px 5%; }
+.spotlight-row.desktop { background: #006387; }
+.spotlight-row.laptop { background: #2D5A27; flex-direction: row-reverse; }
+.marquee { background: #FFF; overflow: hidden; padding: 20px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.marquee-inner { display: flex; gap: 50px; animation: scroll 20s linear infinite; width: max-content; }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.manifesto { padding: 80px 5%; text-align: center; background: #F4F4F4; }
+.manifesto h2 { font-size: 3rem; color: #006387; }
+.badge { background: #b75f00; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; font-weight: bold; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 5%; }
+.card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.anatomy-container { position: relative; background: #b75f00; padding: 100px 5%; text-align: center; overflow: hidden; }
+.component-part { transition: transform 0.3s ease; cursor: help; }
+.component-part:hover { transform: scale(1.1); }
+footer { background: #222; color: #ccc; padding: 40px 5%; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+.footer-bottom { border-top: 1px solid #444; margin-top: 40px; padding-top: 20px; text-align: center; font-size: 0.8rem; }
+#anatomy-dialog { padding: 20px; border-radius: 8px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 400px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+@media (max-width: 768px) { .hero, .mission-bar, .spotlight-row, .footer-grid, .grid-3 { flex-direction: column !important; text-align: center; } .hero-img, .mission-bar div, .spotlight-row div { padding: 0 !important; } }
+    </style>
+</head>
+<body>
+    <header>
+  <div class="logo" style="font-weight:900; font-size:1.5rem; color:#006387;">ELEMENT<span style="color:#df7b10">MODULAR</span></div>
+  <nav>
+    <a href="index">Home</a>
+    <a href="categories">Shop</a>
+    <a href="product-overview">Anatomy</a>
+    <a href="spec-sheet" class="active" aria-current="page">Specs</a>
+    <a href="about-us">About</a>
+  </nav>
+</header><main style="flex:1;">
+  <h1 class="sr-only">Technical Specifications Matrix</h1>
+  <section style="padding: 60px 5%;">
+    <h2>Gaming Benchmarks</h2>
+    <div style="margin-top:30px;">
+      <p>Cyberpunk 2077 (1440p Ultra)</p>
+      <div style="background:#eee; width:100%; height:30px; border-radius:15px; overflow:hidden;">
+        <div style="background:#b75f00; width:85%; height:100%; display:flex; align-items:center; padding-left:15px; color:white; font-weight:bold;">85 FPS</div>
+      </div>
+      <p style="margin-top:20px;">Elden Ring (4K High)</p>
+      <div style="background:#eee; width:100%; height:30px; border-radius:15px; overflow:hidden;">
+        <div style="background:#b75f00; width:60%; height:100%; display:flex; align-items:center; padding-left:15px; color:white; font-weight:bold;">60 FPS</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 60px 5%; background:white;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h2>Technical Matrix</h2>
+      <div>
+        <button onclick="toggleSpecs('basic')" style="padding:8px 15px;">Basic</button>
+        <button onclick="toggleSpecs('pro')" style="padding:8px 15px;">Pro</button>
+      </div>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <tr style="border-bottom:2px solid #006387;"><th style="text-align:left; padding:15px;">Feature</th><th style="text-align:left; padding:15px;">Specification</th></tr>
+      <tr><td style="padding:15px; border-bottom:1px solid #eee;">Processor</td><td style="padding:15px; border-bottom:1px solid #eee;">Intel Core i7-13700H / AMD Ryzen 7 7840U</td></tr>
+      <tr class="spec-pro" style="display:none;"><td style="padding:15px; border-bottom:1px solid #eee;">TDP</td><td style="padding:15px; border-bottom:1px solid #eee;">Up to 60W Sustained</td></tr>
+      <tr><td style="padding:15px; border-bottom:1px solid #eee;">Memory</td><td style="padding:15px; border-bottom:1px solid #eee;">Up to 64GB DDR5 (2x SODIMM)</td></tr>
+      <tr class="spec-pro" style="display:none;"><td style="padding:15px; border-bottom:1px solid #eee;">Bus Speed</td><td style="padding:15px; border-bottom:1px solid #eee;">5600MT/s</td></tr>
+    </table>
+  </section>
+
+  <section style="padding: 60px 5%; text-align:center; background:#eee;">
+    <h2>Engineer Hub</h2>
+    <p>Access the source code of your hardware.</p>
+    <div class="grid-3" style="margin-top:30px;">
+      <div class="card"><h3>CAD Blueprints</h3><p>.STEP files for chassis mods.</p><a href="#" style="color:#006387">Download</a></div>
+      <div class="card"><h3>Repair Manuals</h3><p>Step-by-step PDF guides.</p><a href="#" style="color:#006387">View</a></div>
+      <div class="card"><h3>Firmware</h3><p>Open-source EC firmware.</p><a href="#" style="color:#006387">GitHub</a></div>
+    </div>
+  </section>
+</main><footer>
+  <div class="footer-grid">
+    <div>
+      <h3 style="color:white">Newsletter</h3>
+      <p>Get repair guides and product updates.</p>
+      <input type="email" aria-label="Email address for newsletter" placeholder="Email address" style="padding:10px; width:100%; margin-bottom:10px; border:none; border-radius:4px;">
+      <button class="btn-primary" style="width:100%">Subscribe</button>
+    </div>
+    <div>
+      <h3 style="color:white">Products</h3>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="categories" style="color:#ccc; text-decoration:none;">Laptops</a></li>
+        <li><a href="categories" style="color:#ccc; text-decoration:none;">Desktops</a></li>
+        <li><a href="#" style="color:#ccc; text-decoration:none;">Expansion Cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:white">Resources</h3>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="spec-sheet" style="color:#ccc; text-decoration:none;">Repair Manuals</a></li>
+        <li><a href="about-us" style="color:#ccc; text-decoration:none;">Community</a></li>
+        <li><a href="#" style="color:#ccc; text-decoration:none;">Blueprints</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 ElementModular. All rights reserved. Right to Repair Advocate.</p>
+  </div>
+</footer>
+    
+    <script>
+        function openAnatomy(name, desc, potential) {
+  const dialog = document.getElementById('anatomy-dialog');
+  dialog.innerHTML = `<h3>${name}</h3><p>${desc}</p><p><strong>Upgrade Potential:</strong> ${potential}</p><button onclick="this.closest('dialog').close()">Close</button>`;
+  dialog.showModal();
+}
+
+function toggleCategory(type) {
+  document.querySelectorAll('.product-card').forEach(card => {
+    if (card.dataset.type === type || type === 'all') {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function toggleSpecs(mode) {
+  const basic = document.querySelectorAll('.spec-basic');
+  const pro = document.querySelectorAll('.spec-pro');
+  if (mode === 'pro') {
+    pro.forEach(el => el.style.display = 'table-row');
+  } else {
+    pro.forEach(el => el.style.display = 'none');
+  }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+﻿Metric,Shapiro-Wilk p-value,Test Method,Itera-Web-Q,Lovable,Test Statistic,p-value,Effect Size,Outcome
+LH Performance,0.084,Paired-Samples T-Test,99.67 (1.06),89.60 (6.81),t = 8.42,< 0.001,d = 1.54,Itera-Web-Q
+LH Accessibility,0.944,Paired-Samples T-Test,98.13 (2.19),95.73 (1.39),t = 5.84,< 0.001,d = 1.06,Itera-Web-Q
+LH SEO,< 0.001,Wilcoxon,100.00 (0.00),100.00 (6.00),Z = -3.49,< 0.001,r = 0.45,Itera-Web-Q
+LH Best Practices,Descriptive (Zero Variance),-,-,-,-,-,-,Not Sig.
+Pa11y (Errors),< 0.001,Wilcoxon,0.00 (2.00),29.00 (39.75),Z = -4.57,< 0.001,r = 0.59,Itera-Web-Q
+Pa11y (Warnings),0.239,Paired-Samples T-Test,25.47 (18.04),78.37 (37.17),t = -7.85,< 0.001,d = 1.43,Itera-Web-Q
+Green Software,0.168,Paired-Samples T-Test,98.67 (1.52),82.50 (2.53),t = 40.86,< 0.001,d = 7.46,Itera-Web-Q
+Usability Heuristic,0.353,Paired-Samples T-Test,3.57 (2.73),4.17 (3.85),t = -0.81,0.425,d = 0.15,Not Sig.

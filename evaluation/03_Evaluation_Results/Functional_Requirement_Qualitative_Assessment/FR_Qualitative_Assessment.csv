@@ -1,0 +1,54 @@
+﻿Web Type,Web Name,URL (Itera-Web-Q),Omission (Itera-Web-Q),Hallucination (Itera-Web-Q),Remark,URL (Lovable),Omission (Lovable),Hallucination (Lovable)
+Blog,Brainy Doodle (waitbutwhy),https://web-ai-quality-itrwq-brainy-doodle-137d1b.pages.dev,"Topic page: Topic-specific Article List (Thumbnail + Title) shows only Title and Description. (Missing component) 
+content page: missing Reading Progress Bar (Tangerine). (Missing component) ",None,home page: Hand-drawn Logo — rendered as text logo (Technical Limitation),https://brainy-doodle-blog.lovable.app/,topic page: Topic-specific Article List (Thumbnail + Title) shows only Title and Description. (Missing component),None
+Blog,Matcha Heritage (mizubatea),https://web-ai-quality-itrwq-matcha-heritage-ab87b7.pages.dev/,"history-of-matcha page: has timeline but images do not alternate. (Missing component) 
+origin-regions-japan page: section exists but map does not load. Pages requiring 2D charts are not implemented. ",None,-,https://matcha-whispers.lovable.app/,origin-regions-japan page: section exists but map does not load. (Missing component),None
+Blog,Yum Yum Yummy (Pinch of Yum ),https://web-ai-quality-itrwq-yum-yum-yummy-8b8999.pages.dev/,list-of-food page: Recipe Card Grid (a clean 3-column grid of photos with titles in serif font): only 2 cards appear. (Missing component),None,-,https://yum-recipe-journey.lovable.app/,None,None
+Corporate/Company,A company (coca-cola),https://web-ai-quality-itrwq-a-company-583f2e.pages.dev/,None,None,-,https://vision-spotlight-72.lovable.app/,None,None
+Corporate/Company,Arbor Coffee & Co. (starbucks),https://web-ai-quality-itrwq-arbor-coffee-co-5ed94b.pages.dev/,home page: Alternating Value Blocks — blocks do not alternate (Missing component) ,None,-,https://arbor-green-greens.lovable.app/,None,None
+Corporate/Company,ATech Solutions (Adobe),https://web-ai-quality-itrwq-atech-solutions-4782b9.pages.dev/,None,None,-,https://atech-canvas.lovable.app/,our-company page: Executive Preview section (4-column grid of grayscale portraits that turn to color on hover) — only one image is shown and grayscale effect is not applied. (Missing component) ,None
+Corporate/Company,VitalityGlobal (unilever),https://web-ai-quality-itrwq-vitalityglobal-d2825b.pages.dev/,about-us page: Global Presence stats (Icons) section is missing icons. (Missing component),None,-,https://ethical-growth-center.lovable.app/,None,None
+E-Commerce,Aura Kitchenware (beautiful),https://web-ai-quality-itrwq-aura-kitchenware-9d8ce2.pages.dev/,"home page: Hero Image Slider shows images but does not slide (Missing component); missing Featured Recipes Preview, Instagram Social Feed. (Missing section)
+all-products page: missing Seasonal Collection Banner, Pagination. (Missing section)
+how-to-use page: missing Product Demonstration Blocks, Frequently Asked Usage Questions. (Missing section)
+recipes page: missing Recipe Category Filter (Quick Meals, Healthy, Desserts), Serving Size Toggle, Related Kitchenware Recommendations. (Missing section)
+our-story page: missing Heritage Timeline, Material & Quality Commitment, Founder's Personal Gallery.ent, Founder’s Personal Gallery. (Missing section)",None,-,https://aura-kitchen-style.lovable.app/,"all-products page: missing Seasonal Collection Banner, Pagination. (Missing section) 
+our-story page: missing Founder's Personal Gallery. (Missing section)",None
+E-Commerce,ElementModular (Framework Laptop),https://web-ai-quality-itrwq-elementmodular-a8b952.pages.dev/,Product-Overview page: missing Port Showcase section. (Missing section),None,-,https://element-explore-hub.lovable.app/,None,On iteration round 2 → layout has margins causing the width to not be full-bleed.
+E-Commerce,Mix & Bind (mishmash),https://web-ai-quality-itrwq-mix-bind-e4218c.pages.dev/,books page: missing color in filter. (Missing component) ,None,-,https://mix-and-bind-kit.lovable.app/,None,None
+Education/Training ,Apex Science Library (MIT OpenCourseWare),https://web-ai-quality-itrwq-apex-science-library-334b24.pages.dev/,None,topic-outline page: Download Hub section — icon is a download icon instead of a file icon.,-,https://apex-learn-library.lovable.app/,None,None
+Education/Training ,Junior Learning (Openstax),https://web-ai-quality-itrwq-junior-learning-171566.pages.dev/,None,None,-,https://story-spark-edu.lovable.app/,"Navigating to a topic page returns 404. (Missing component)
+subject-detail page: breadcrumb shows ""/"" instead of ""Home > [Subject Name]"". (Missing component)",None
+Education/Training ,LearnNova (coursera),https://web-ai-quality-itrwq-learnnova-ddf94e.pages.dev/,None,None,-,https://learnnova-pathways.lovable.app/,None,None
+Leisure/Entertainment,CineWave (papaya.rocks),https://web-ai-quality-itrwq-cinewave-ca78e4.pages.dev/,movie page: Continuous Masonry Feed — infinite scroll not implemented (Missing component),None,-,https://cinewave-trend-beacon.lovable.app/,movie page: Continuous Masonry Feed — infinite scroll not implemented. (Missing component),Modal implemented across all pages instead of trend-detail page only.
+Leisure/Entertainment,Forger Case Files (anilist (anime)),https://web-ai-quality-itrwq-forger-case-files-c9b130.pages.dev/,None,None,-,https://forger-briefing-data.lovable.app/,None,None
+Leisure/Entertainment,Ms Music (inverse),https://web-ai-quality-itrwq-ms-music-7cfc7a.pages.dev/,singer-profile page: missing Social Media Connections section. (Missing section),None,-,https://ms-music-vibe.lovable.app/,None,None
+Leisure/Entertainment,Thai Gallery Guide (Gagosian),https://web-ai-quality-itrwq-thai-gallery-guide-0a30de.pages.dev/,"home page: missing Thai Art Quarterly Journal (Magazine Layout), Minimalist Newsletter Subscription. (Missing section)
+art page: missing Artist Credit Footer. Event page: missing Past Exhibition Archive. (Missing section)
+artist page: missing Featured Master Artist of the Month, Emerging Talent Spotlight. (Missing section)
+gallery-museum page: missing Featured Museum Spotlight, Visiting Hours & Admission Guide, Contact Directory. (Missing section)",None,-,https://thai-art-pulse.lovable.app/,gallery-museum page: interactive map not implemented — only a placeholder is shown. (Missing component),None
+News,AuraNews (BBC),https://web-ai-quality-itrwq-auranews-7070ac.pages.dev/,"home page: missing Visual Arts Gallery (Full-bleed imagery), Topic Index (Monthly/Yearly Archive). (Missing section)
+health-category page: missing The Health Stream (List layout), Health Expert Column Snippets. (Missing section)
+culture-category page: missing Culture Hub Header, Movie & TV Show Grid, Weekly Recommendation Sidebar. (Missing section)
+culture-content page: missing Recommended Culture Stories.(Missing section)",None,-,https://aura-deep-stories.lovable.app/,None,None
+News,Legacy Media (TIME),https://web-ai-quality-itrwq-legacy-media-395cd7.pages.dev/,olympics-2026 page: missing Live News Feed section. (Missing section),None,-,https://the-paragon-post.lovable.app/,None,None
+News,NeonLogic (The Verge),https://web-ai-quality-itrwq-neonlogic-208e9f.pages.dev/,"home page: missing Tech Breakthrough Feed section. (Missing section)
+tech-category page: missing Latest Hardware Reviews section. (Missing section)",None,-,https://neon-logic-stream.lovable.app/,ai-content page: body text exists but High-Contrast Body styling is not applied. (Missing component),None
+News,SiamCurrent (bangkok post),https://web-ai-quality-itrwq-siamcurrent-3ef693.pages.dev/,None,None,-,https://siam-news-hub.lovable.app/,None,None
+Personal,Alice (Roxie Nafousi),https://web-ai-quality-itrwq-alice-5415cd.pages.dev/,None,None,-,https://serene-growth-studio.lovable.app/,None,None
+Personal,Alice Life (chester),https://web-ai-quality-itrwq-alice-life-244d59.pages.dev/,None,None,-,https://alice-life-explorer.lovable.app/,projects page: Detail section does not use the specified icons — text badges are used instead. (Missing component) ,None
+Personal,Anya Dev (taniarascia),https://web-ai-quality-itrwq-anya-dev-55a0ec.pages.dev/,None,None,-,https://anya-garden-hub.lovable.app/,None,experiment-detail page: appears to attempt bold text but renders as **…** instead.
+Public Administration/Institutional,CivicHub (gov.uk),https://web-ai-quality-itrwq-civichub-50ae9b.pages.dev/,"services-hub page: Category Grid missing icons. (Missing component) 
+user-portal page: uses text links instead of icons; Settings Toggle is single-column instead of a 2-column row. (Missing component) 
+contact-support page: FAQ shows only 2 out of 5. (Missing component) ","services-hub page: Eligibility Accordion — label changed to ""Eligibility Check"" instead of specified ""Can I apply?""",-,https://my-civic-guide.lovable.app/,None,"home page: an extra section ""New to CivicHub?"" was added beyond the requirements."
+Public Administration/Institutional,SiamState Portal (oregon),https://web-ai-quality-itrwq-siamstate-portal-9cf64e.pages.dev/,Does not change color by department. ,None,-,https://siamstate-connect.lovable.app/,environment-hub page: colored text-shadow on numbers not implemented. (Missing component),None
+Public Administration/Institutional,UrbanConnect (gov.sg),https://web-ai-quality-itrwq-urbanconnect-2b1481.pages.dev/,"factually-checkpulse & corrections-and-clarifications page: has a search bar but no filter options — filters are placed inside the search bar instead. (Missing component)
+fact-detail page: missing icon. (Missing component)",None,-,https://urbanconnect-clarity-hub.lovable.app/,None,"national-day-rally-2025 page: Policy Highlights section does not use the label ""Key Takeaways""."
+Service Portal,DevPortal (stripe),https://web-ai-quality-itrwq-devportal-29d40f.pages.dev/,"Sidebar not implemented. (Missing component) 
+home page: missing Popular Documentation Categories section. (Missing section)
+support page: missing Search Result Listing, Guided Troubleshooting Path sections. (Missing section)
+api-reference page: missing Authentication Guide, Error Code Glossary sections. (Missing section)",None,-,https://devportal-insight.lovable.app/,support-detail page: missing Related Articles section. (Missing section),None
+Service Portal,EliteAccess (digital ocean),https://web-ai-quality-itrwq-eliteaccess-6c2018.pages.dev/,"signup page: missing Real-time Validation Indicators. (Missing section)
+product-review page: missing Star Rating Summary Section. (Missing section)",None,-,https://pro-member-gate.lovable.app/,None,None
+Service Portal,SyncCenter (Slack Help Center),https://web-ai-quality-itrwq-synccenter-d21d9f.pages.dev/,"home page: Popular Articles shows 3 instead of 5. (Missing component)
+starter page: steps show 2 instead of 3. (Missing component) ",None,-,https://portal-answers.lovable.app/,None,None

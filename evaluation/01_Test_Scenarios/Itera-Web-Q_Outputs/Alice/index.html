@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="A space for self-growth stories and wellness essentials.">
+    <title>Alice | Self-Growth &amp; Wellness</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; background-color: #F5F2ED; color: #333; line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3, .editorial-font { font-family: 'Georgia', serif; font-weight: normal; }
+a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+header { position: sticky; top: 0; background: #F5F2ED; z-index: 1000; border-bottom: 1px solid rgba(226, 88, 34, 0.1); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+nav a { margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; position: relative; }
+nav a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -4px; left: 0; background-color: #E25822; transition: width 0.3s ease; }
+nav a:hover::after, nav a[aria-current="page"]::after { width: 100%; }
+nav a:hover, nav a[aria-current="page"] { color: #E25822; }
+main { flex: 1; }
+section { padding: 80px 10%; opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+section.visible { opacity: 1; transform: translateY(0); }
+.btn { display: inline-block; padding: 12px 30px; background: #d14711; color: #fff; border: none; cursor: pointer; transition: opacity 0.3s; }
+.btn:hover { opacity: 0.9; }
+.icon-svg { width: 48px; height: 48px; fill: #333; transition: fill 0.3s ease; }
+.card:hover .icon-svg { fill: #E25822; }
+.card { transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-5px); }
+footer { padding: 40px 10%; background: #F5F2ED; border-top: 1px solid #ddd; text-align: center; font-size: 0.8rem; color: #070707; }
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 1rem; }
+  nav a { margin: 0 10px; font-size: 0.8rem; }
+  section { padding: 40px 5%; }
+  h1 { font-size: 2.5rem !important; }
+  .grid-mobile-stack { grid-template-columns: 1fr !important; gap: 30px !important; }
+  .flex-mobile-stack { flex-direction: column !important; gap: 30px !important; }
+}
+    </style>
+</head>
+<body>
+    <header>
+  <div class="brand-logo editorial-font" style="font-size: 1.5rem; color: #E25822;">Alice</div>
+  <nav>
+    <a href="index" aria-current="page">Home</a>
+    <a href="alice-profile">Profile</a>
+    <a href="product">Shop</a>
+    <a href="contact">Contact</a>
+  </nav>
+</header><main style="display: flex; flex-direction: column;">
+  <section style="text-align: center;">
+    <svg class="icon-svg" style="width: 120px; height: 120px; margin-bottom: 2rem;" viewBox="0 0 24 24"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"></path></svg>
+    <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Cultivating Inner Serenity</h1>
+    <p style="max-width: 600px; margin: 0 auto; font-size: 1.2rem;">A soft, magazine-style space for self-growth stories and wellness essentials.</p>
+  </section>
+  <section style="background: #fff; text-align: center;">
+    <blockquote style="font-size: 2rem; font-style: italic; color: #E25822; max-width: 800px; margin: 0 auto;" class="editorial-font">
+      "The journey of a thousand miles begins with a single step toward yourself."
+    </blockquote>
+  </section>
+  <section class="grid-mobile-stack" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center;">
+    <div class="card">
+      <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12,6A6,6 0 0,1 18,12C18,14.22 16.79,16.16 15,17.2V19A1,1 0 0,1 14,20H10A1,1 0 0,1 9,19V17.2C7.21,16.16 6,14.22 6,12A6,6 0 0,1 12,6M14,21V22A1,1 0 0,1 13,23H11A1,1 0 0,1 10,22V21H14M20,11H23V13H20V11M1,11H4V13H1V11M11,1V4H13V1H11M4.92,3.5L7.05,5.64L5.63,7.05L3.5,4.93L4.92,3.5M18.36,5.64L20.5,3.5L21.92,4.93L19.78,7.05L18.36,5.64Z"></path></svg>
+      <h2 class="editorial-font">Coaching</h2>
+      <p>Personalized paths to clarity.</p>
+    </div>
+    <div class="card">
+      <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12,22C12,22 21,13 21,8C21,5.24 18.76,3 16,3C14.45,3 13.05,3.71 12.14,4.83C12.07,4.92 12,5 12,5C12,5 11.93,4.92 11.86,4.83C10.95,3.71 9.55,3 8,3C5.24,3 3,5.24 3,8C3,13 12,22 12,22Z"></path></svg>
+      <h2 class="editorial-font">Wellness</h2>
+      <p>Rituals for the modern soul.</p>
+    </div>
+    <div class="card">
+      <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12,18H6V14H12M21,14V12L20,7H4L3,12V14H4V20H14V14H18V20H20V14M20,4H4V6H20V4Z"></path></svg>
+      <h2 class="editorial-font">Shop</h2>
+      <p>Curated growth essentials.</p>
+    </div>
+  </section>
+  <section class="press-ribbon" style="border-top: 1px solid #eee; padding: 40px 10%; text-align: center;">
+    <div class="flex-mobile-stack" style="display: flex; justify-content: center; gap: 50px; color: #090909; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">
+      <span>Vogue</span>
+      <span>Self Magazine</span>
+      <span>Wellness Daily</span>
+      <span>The Edit</span>
+    </div>
+  </section>
+</main><footer>
+  <p>© 2026 Alice. All rights reserved.</p>
+</footer>
+    
+    <script>
+        const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, observerOptions);
+document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+function toggleAccordion(id) {
+  const content = document.getElementById(id);
+  const all = document.querySelectorAll('.accordion-content');
+  all.forEach(el => { if(el.id !== id) el.style.display = 'none'; });
+  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+    </script>
+</body>
+</html>

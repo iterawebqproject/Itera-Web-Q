@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97.3%;
+    --foreground: 320 96% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 320 96% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 320 96% 12%;
+
+    --primary: 322 97% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 320 20% 94%;
+    --secondary-foreground: 322 97% 20%;
+
+    --muted: 320 10% 92%;
+    --muted-foreground: 320 10% 45%;
+
+    --accent: 322 80% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 320 15% 88%;
+    --input: 320 15% 88%;
+    --ring: 322 97% 20%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 322 97% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 322 97% 20%;
+    --sidebar-accent: 322 80% 26%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 322 60% 28%;
+    --sidebar-ring: 0 0% 100%;
+
+    --surface-warm: 30 30% 96%;
+    --hero-gradient: linear-gradient(135deg, hsl(322, 97%, 20%) 0%, hsl(340, 70%, 35%) 100%);
+  }
+
+  .dark {
+    --background: 320 20% 6%;
+    --foreground: 0 0% 95%;
+    --card: 320 20% 9%;
+    --card-foreground: 0 0% 95%;
+    --popover: 320 20% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 322 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 320 20% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 320 15% 18%;
+    --muted-foreground: 320 10% 60%;
+    --accent: 322 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 320 15% 20%;
+    --input: 320 15% 20%;
+    --ring: 322 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}

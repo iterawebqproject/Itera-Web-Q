@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 50 60% 97%;
+    --foreground: 150 30% 12%;
+
+    --card: 50 40% 98%;
+    --card-foreground: 150 30% 12%;
+
+    --popover: 50 40% 98%;
+    --popover-foreground: 150 30% 12%;
+
+    --primary: 150 30% 15%;
+    --primary-foreground: 50 60% 97%;
+
+    --secondary: 80 40% 46%;
+    --secondary-foreground: 50 60% 97%;
+
+    --muted: 50 20% 92%;
+    --muted-foreground: 150 10% 40%;
+
+    --accent: 80 40% 46%;
+    --accent-foreground: 50 60% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 50 15% 85%;
+    --input: 50 15% 85%;
+    --ring: 150 30% 15%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 50 20% 96%;
+    --sidebar-foreground: 150 30% 12%;
+    --sidebar-primary: 150 30% 15%;
+    --sidebar-primary-foreground: 50 60% 97%;
+    --sidebar-accent: 80 40% 46%;
+    --sidebar-accent-foreground: 50 60% 97%;
+    --sidebar-border: 50 15% 85%;
+    --sidebar-ring: 150 30% 15%;
+
+    /* Custom tokens */
+    --matcha-deep: 150 30% 15%;
+    --matcha-leaf: 80 40% 46%;
+    --matcha-cream: 50 60% 97%;
+    --matcha-gold: 42 60% 55%;
+    --matcha-warm: 35 30% 90%;
+  }
+
+  .dark {
+    --background: 150 30% 6%;
+    --foreground: 50 20% 92%;
+    --card: 150 25% 10%;
+    --card-foreground: 50 20% 92%;
+    --popover: 150 25% 10%;
+    --popover-foreground: 50 20% 92%;
+    --primary: 80 40% 46%;
+    --primary-foreground: 150 30% 6%;
+    --secondary: 150 20% 20%;
+    --secondary-foreground: 50 20% 92%;
+    --muted: 150 15% 15%;
+    --muted-foreground: 50 10% 60%;
+    --accent: 80 40% 46%;
+    --accent-foreground: 150 30% 6%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 150 15% 18%;
+    --input: 150 15% 18%;
+    --ring: 80 40% 46%;
+    --sidebar-background: 150 30% 6%;
+    --sidebar-foreground: 50 20% 92%;
+    --sidebar-primary: 80 40% 46%;
+    --sidebar-primary-foreground: 150 30% 6%;
+    --sidebar-accent: 150 20% 15%;
+    --sidebar-accent-foreground: 50 20% 92%;
+    --sidebar-border: 150 15% 18%;
+    --sidebar-ring: 80 40% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}

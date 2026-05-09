@@ -1,0 +1,9 @@
+﻿Metric,Shapiro-Wilk p-value,Test Method,Pre-Refinement,Post-Refinement,Test Statistic,p-value,Effect Size,Outcome
+LH Performance,< 0.001,Wilcoxon,100.00 (0.00),100.00 (0.00),Z = - 0.54,0.593,r = 0.07,Not Sig.
+LH Accessibility,0.119,Paired-Samples T-Test,91.90 (3.92),98.13 (2.19),t = - 8.33,< 0.001,d = 1.52,Post-Refinement
+LH SEO,< 0.001,Wilcoxon,100.00 (2.00),100.00 (0.00),Z = -2.75,0.006,r = 0.36,Post-Refinement
+LH Best Practices,< 0.001,Wilcoxon,100.00 (0.000),100.00 (0.00),Z = -1.00,0.317,r = 0.13,Not Sig.
+Pa11y (Errors),< 0.001,Wilcoxon,11.00 (11.15),0.000 (2.00),Z = -4.78,< 0.001,r = 0.62,Post-Refinement
+Pa11y (Warnings),0.142,Paired-Samples T-Test,27.97 (18.97),25.47 (18.04),t = 3.10,0.004,d = 0.57,Post-Refinement
+Green Software,< 0.001,Wilcoxon,98.00 (3.00),99.50 (3.00),Z = -1.98,0.047,r = 0.26,Post-Refinement
+Usability Heuristic,0.548,Paired-Samples T-Test,13.03 (3.85),3.57 (2.72),t = 13.23,< 0.001,d = 2.42,Post-Refinement

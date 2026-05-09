@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 0 0% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    --primary: 348 83% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 12%;
+
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 348 83% 95%;
+    --accent-foreground: 348 83% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 348 83% 47%;
+
+    --radius: 0.375rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 12%;
+    --sidebar-primary: 348 83% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 348 83% 95%;
+    --sidebar-accent-foreground: 0 0% 12%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 348 83% 47%;
+
+    /* Custom tokens */
+    --hero-bg: 348 83% 47%;
+    --hero-foreground: 0 0% 100%;
+    --badge-verified: 348 83% 47%;
+    --badge-clarified: 348 60% 70%;
+    --ticker-bg: 0 0% 15%;
+    --ticker-foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .hero-section {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .sticky-header {
+    @apply sticky top-0 z-50 bg-primary text-primary-foreground transition-all duration-300;
+  }
+
+  .sticky-header.scrolled {
+    @apply py-1 shadow-lg;
+  }
+
+  .badge-verified {
+    background-color: hsl(var(--badge-verified));
+    @apply text-white px-3 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-clarified {
+    background-color: hsl(var(--badge-clarified));
+    @apply text-white px-3 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .ticker-bar {
+    background-color: hsl(var(--ticker-bg));
+    color: hsl(var(--ticker-foreground));
+  }
+}

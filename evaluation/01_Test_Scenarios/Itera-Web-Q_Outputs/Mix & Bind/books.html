@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Create a journal that is perfect for you.">
+    <title>Shop All | Mix &amp; Bind</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: 'Helvetica', Arial, sans-serif; background-color: #F5F5F5; color: #333; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.5; }
+header { background: #FFF; border-bottom: 2px solid #EEE; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; transition: color 0.2s; }
+nav a:hover { color: #e87500; }
+nav a.active { color: #e87500; border-bottom: 2px solid #e87500; }
+.logo { font-size: 1.5rem; font-weight: 900; color: #e87500; text-transform: uppercase; letter-spacing: -1px; }
+footer { background: #333; color: #FFF; padding: 3rem 5%; text-align: center; font-size: 0.8rem; }
+.btn { display: inline-block; padding: 1rem 2rem; background: #e87500; color: #FFF; text-decoration: none; font-weight: bold; border-radius: 4px; border: none; cursor: pointer; transition: transform 0.2s; }
+.btn:hover { transform: translateY(-2px); }
+.grid { display: grid; gap: 2rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+.hero-tangerine { background: #e87500; color: #FFF; padding: 6rem 5%; text-align: center; background-image: radial-gradient(#ff9933 1px, transparent 1px); background-size: 20px 20px; }
+.hero-tangerine h1 { font-size: 4rem; margin: 0; text-transform: uppercase; line-height: 0.9; }
+.card { background: #FFF; padding: 2rem; border: 1px solid #EEE; transition: border-color 0.3s; }
+.card:hover { border-color: #e87500; }
+.ghost-card { border: 1px solid #DDD; background: #FFF; padding: 1rem; position: relative; }
+.sidebar-layout { display: flex; gap: 3rem; }
+.sidebar { width: 250px; flex-shrink: 0; }
+.main-content { flex: 1; }
+.pattern-dot { background-image: radial-gradient(#CCC 1px, transparent 1px); background-size: 10px 10px; height: 150px; border: 1px solid #EEE; }
+.pattern-line { background: repeating-linear-gradient(0deg, #EEE, #EEE 1px, #FFF 1px, #FFF 20px); height: 150px; border: 1px solid #EEE; }
+.pattern-grid { background-image: linear-gradient(#EEE 1px, transparent 1px), linear-gradient(90deg, #EEE 1px, transparent 1px); background-size: 20px 20px; height: 150px; border: 1px solid #EEE; }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.matrix-table td, .matrix-table th { padding: 1rem; border-bottom: 1px solid #EEE; text-align: left; }
+.dot-rating { color: #ba5d00; }
+.scroll-x { display: flex; overflow-x: auto; gap: 1.5rem; padding-bottom: 1rem; }
+.scroll-x .card { min-width: 250px; flex-shrink: 0; }
+@media (max-width: 768px) { .sidebar-layout { flex-direction: column; } .hero-tangerine h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <header>
+  <div class="logo">Mix & Bind</div>
+  <nav>
+    <a href="index">Home</a>
+    <a href="books" class="active" aria-current="page">Books</a>
+    <a href="paper-textures">Paper</a>
+    <a href="how-to-diy">How-To</a>
+    <a href="about-us">About</a>
+  </nav>
+</header><main class="container">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #000; padding-bottom: 1rem; margin-bottom: 2rem;">
+    <h1 style="margin:0;">Shop All</h1>
+    <span>24 Items</span>
+  </div>
+  
+  <div class="sidebar-layout">
+    <aside class="sidebar">
+      <div style="margin-bottom: 2rem;">
+        <button class="btn" style="padding: 0.5rem 1rem; background:none; border: 1px solid #b05800; color:#b05800; font-size: 0.8rem;">Best Sellers</button>
+        <button class="btn" style="padding: 0.5rem 1rem; background:none; border: 1px solid #b05800; color:#b05800; font-size: 0.8rem;">New</button>
+      </div>
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Size</h2>
+        <label style="display:block;"><input type="checkbox"> A5 Standard</label>
+        <label style="display:block;"><input type="checkbox"> A6 Pocket</label>
+        <label style="display:block;"><input type="checkbox"> B5 Large</label>
+      </div>
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Ruling</h2>
+        <label style="display:block;"><input type="checkbox"> Dot Grid</label>
+        <label style="display:block;"><input type="checkbox"> Lined</label>
+        <label style="display:block;"><input type="checkbox"> Blank</label>
+      </div>
+    </aside>
+    
+    <div class="main-content">
+      <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+        <div class="ghost-card"><strong>Classic A5</strong><p>$24</p></div>
+        <div class="ghost-card"><strong>Softcover Pocket</strong><p>$18</p></div>
+        <div class="ghost-card"><strong>Hardcover Journal</strong><p>$32</p></div>
+        <div class="ghost-card"><strong>Drafting Book</strong><p>$28</p></div>
+        <div class="ghost-card"><strong>Artist Sketchbook</strong><p>$35</p></div>
+        <div class="ghost-card"><strong>Daily Planner</strong><p>$26</p></div>
+      </div>
+    </div>
+  </div>
+</main><footer>
+  <div style="margin-bottom: 2rem;">
+    <div class="logo" style="color:#FFF; margin-bottom: 1rem;">Mix & Bind</div>
+    <p>Hand-bound quality for modern thinkers.</p>
+  </div>
+  <p>© 2026 Mix & Bind. All rights reserved.</p>
+</footer>
+    
+    <script>
+        function setupFilters() { console.log('Filters initialized'); }
+const dialogs = document.querySelectorAll('dialog');
+dialogs.forEach(d => d.addEventListener('click', e => { if(e.target === d) d.close(); }));
+    </script>
+</body>
+</html>

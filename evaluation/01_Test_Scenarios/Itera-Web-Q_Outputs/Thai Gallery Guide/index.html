@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="A curated gateway to Thailand’s contemporary art world.">
+    <title>Thai Gallery Guide | Premium Art &amp; Exhibition Directory</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: 'Trebuchet MS', sans-serif; background-color: #F5FFFA; color: #1a1a1a; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+h1, h2, h3 { font-family: 'Palatino', serif; font-weight: normal; color: #111; }
+header { background: #fff; border-bottom: 1px solid #eee; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+nav a { margin-left: 2rem; text-decoration: none; color: #1a1a1a; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+nav a:hover { color: #FF4F00; }
+nav a[aria-current="page"] { color: #FF4F00; font-weight: bold; border-bottom: 2px solid #FF4F00; }
+main { flex: 1; min-height: 70vh; }
+.hero-slider { position: relative; height: 80vh; overflow: hidden; background: #000; }
+.slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.5s ease-in-out; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+.slide.active { opacity: 1; }
+.slide img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.7); }
+.cta-btn { background-color: #d64200; color: #fff; padding: 1rem 2.5rem; text-decoration: none; display: inline-block; margin-top: 1.5rem; transition: transform 0.3s; }
+.cta-btn:hover { transform: translateY(-3px); }
+.section-padding { padding: 5rem 5%; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card { overflow: hidden; cursor: pointer; }
+.card img { width: 100%; height: auto; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+.card:hover img { transform: scale(1.02); }
+.metadata { padding: 1rem 0; }
+.metadata span { color: #b33700; font-size: 0.8rem; text-transform: uppercase; }
+.bw-portrait { filter: grayscale(100%); transition: filter 0.5s; }
+.bw-portrait:hover { filter: grayscale(0%); }
+footer { background: #111; color: #fff; padding: 3rem 5%; text-align: center; font-size: 0.8rem; letter-spacing: 1px; }
+.map-placeholder { background: #e0e0e0; height: 400px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid #ccc; }
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .hero-slider { height: 60vh; } header { flex-direction: column; padding: 1rem; } nav { margin-top: 1rem; margin-left: 0; } nav a { margin: 0 0.5rem; font-size: 0.8rem; } }
+    </style>
+</head>
+<body>
+    <header><div class="logo"><strong>THAI GALLERY GUIDE</strong></div><nav><a href="index" aria-current="page">Home</a><a href="art">Art</a><a href="event">Events</a><a href="artist">Artists</a><a href="gallery-museum">Museums</a></nav></header><main><section class="hero-slider"><div class="slide active"><img src="assets/generated-13a726dce5d8.webp" alt="Thai Modern Art" decoding="async" width="640" height="480" loading="eager" fetchpriority="high"><div class="hero-content"><h1>Visions of Bangkok</h1><p>Explore the vibrant contemporary scene.</p><a href="event" class="cta-btn">Discover Exhibitions</a></div></div><div class="slide"><img src="assets/generated-b2a780826d2b.webp" alt="Gallery Interior" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low"><div class="hero-content"><h2>Curated Excellence</h2><p>The definitive guide to Thailand's masterworks.</p><a href="art" class="cta-btn">View Masterpieces</a></div></div><div class="slide"><img src="assets/generated-f0b0c5aaa0db.webp" alt="Artist at Work" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low"><div class="hero-content"><h2>Artist Spotlight</h2><p>Meet the creators shaping the future.</p><a href="artist" class="cta-btn">Meet Artists</a></div></div></section><section class="section-padding"><h2>Current Exhibitions</h2><div class="grid"><div class="card"><img src="assets/generated-300d7fef8f4c.webp" alt="Exhibition 1" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low"><div class="metadata"><span>Bangkok Art Center</span><h2>Neon Spirits</h2><p>Until Oct 2026</p></div></div><div class="card"><img src="assets/generated-5d84e6dcadf4.webp" alt="Exhibition 2" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low"><div class="metadata"><span>MOCA Bangkok</span><h2>Traditional Echoes</h2><p>Permanent Collection</p></div></div></div></section><section class="section-padding" style="background:#fff;"><h2>Artist Spotlight</h2><div class="grid"><div class="card"><img src="assets/generated-e56ec8aa072e.webp" class="bw-portrait" alt="Artist" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low"><div class="metadata"><h2>Anan S.</h2><p>Contemporary Sculpture</p></div></div><div class="card"><img src="assets/generated-340737573a14.webp" class="bw-portrait" alt="Artist" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low"><div class="metadata"><h2>Malee K.</h2><p>Abstract Expressionism</p></div></div></div></section></main><footer><p>THAI GALLERY GUIDE</p><p style="margin: 1rem 0; opacity: 0.6;">The definitive resource for art in the Kingdom of Thailand.</p><p>© 2026 Thai Gallery Guide. All Rights Reserved.</p></footer>
+    
+    <script>
+        let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+function showSlide(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  currentSlide = (n + slides.length) % slides.length;
+  if(slides[currentSlide]) slides[currentSlide].classList.add('active');
+}
+if(slides.length > 0) {
+  setInterval(() => showSlide(currentSlide + 1), 6000);
+}
+function loadMap(el) {
+  const src = el.getAttribute('data-map-src');
+  el.innerHTML = `<iframe src="${src}" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
+}
+    </script>
+</body>
+</html>

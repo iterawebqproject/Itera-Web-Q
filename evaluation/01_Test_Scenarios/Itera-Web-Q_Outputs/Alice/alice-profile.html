@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="A space for self-growth stories and wellness essentials.">
+    <title>Alice Profile | Alice | Alice</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; background-color: #F5F2ED; color: #333; line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3, .editorial-font { font-family: 'Georgia', serif; font-weight: normal; }
+a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+header { position: sticky; top: 0; background: #F5F2ED; z-index: 1000; border-bottom: 1px solid rgba(226, 88, 34, 0.1); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+nav a { margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; position: relative; }
+nav a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -4px; left: 0; background-color: #E25822; transition: width 0.3s ease; }
+nav a:hover::after, nav a[aria-current="page"]::after { width: 100%; }
+nav a:hover, nav a[aria-current="page"] { color: #E25822; }
+main { flex: 1; }
+section { padding: 80px 10%; opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+section.visible { opacity: 1; transform: translateY(0); }
+.btn { display: inline-block; padding: 12px 30px; background: #d14711; color: #fff; border: none; cursor: pointer; transition: opacity 0.3s; }
+.btn:hover { opacity: 0.9; }
+.icon-svg { width: 48px; height: 48px; fill: #333; transition: fill 0.3s ease; }
+.card:hover .icon-svg { fill: #E25822; }
+.card { transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-5px); }
+footer { padding: 40px 10%; background: #F5F2ED; border-top: 1px solid #ddd; text-align: center; font-size: 0.8rem; color: #070707; }
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 1rem; }
+  nav a { margin: 0 10px; font-size: 0.8rem; }
+  section { padding: 40px 5%; }
+  h1 { font-size: 2.5rem !important; }
+  .grid-mobile-stack { grid-template-columns: 1fr !important; gap: 30px !important; }
+  .flex-mobile-stack { flex-direction: column !important; gap: 30px !important; }
+}
+    </style>
+</head>
+<body>
+    <header>
+  <div class="brand-logo editorial-font" style="font-size: 1.5rem; color: #E25822;">Alice</div>
+  <nav>
+    <a href="index">Home</a>
+    <a href="alice-profile" aria-current="page">Profile</a>
+    <a href="product">Shop</a>
+    <a href="contact">Contact</a>
+  </nav>
+</header><main>
+  <section>
+    <h1 class="editorial-font" style="font-size: 2.5rem; margin-bottom: 3rem;">The Transformation Path</h1>
+    <div style="position: relative; padding-left: 40px; border-left: 2px solid #E25822;">
+      <div style="margin-bottom: 40px; position: relative;">
+        <svg class="icon-svg" style="position: absolute; left: -65px; top: 0; background: #F5F2ED;" viewBox="0 0 24 24"><path d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22M12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18Z"></path></svg>
+        <h2 class="editorial-font">The Seed (2018)</h2>
+        <p>Recognizing the need for a slower, more intentional life.</p>
+      </div>
+      <div style="margin-bottom: 40px; position: relative;">
+        <svg class="icon-svg" style="position: absolute; left: -65px; top: 0; background: #F5F2ED;" viewBox="0 0 24 24"><path d="M12,2C11.5,2 11,2.19 10.59,2.59L2.59,10.59C1.81,11.37 1.81,12.63 2.59,13.41L10.59,21.41C11.37,22.19 12.63,22.19 13.41,21.41L21.41,13.41C22.19,12.63 22.19,11.37 21.41,10.59L13.41,2.59C13,2.19 12.5,2 12,2Z"></path></svg>
+        <h2 class="editorial-font">Growth (2021)</h2>
+        <p>Building a community centered around wellness and coaching.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2 class="editorial-font">Workshops</h2>
+    <div style="border-top: 1px solid #ddd;">
+      <div style="padding: 20px 0; border-bottom: 1px solid #ddd; cursor: pointer;" onclick="toggleAccordion('acc1')">
+        <h4 class="editorial-font">Mindful Mornings +</h4>
+        <div id="acc1" class="accordion-content" style="display:none; padding-top: 10px; color: #666;">Next Session: Oct 12th. Focus on breathwork and journaling.</div>
+      </div>
+      <div style="padding: 20px 0; border-bottom: 1px solid #ddd; cursor: pointer;" onclick="toggleAccordion('acc2')">
+        <h4 class="editorial-font">The Art of Boundaries +</h4>
+        <div id="acc2" class="accordion-content" style="display:none; padding-top: 10px; color: #666;">Next Session: Nov 5th. Interactive coaching on personal space.</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div style="border-left: 8px solid #E25822; padding: 40px; background: #fff;">
+      <h3 class="editorial-font">My Philosophy</h3>
+      <p style="font-size: 1.2rem;">I believe that luxury is found in the quiet moments of self-reflection. Growth isn't a destination, but a continuous unfolding of your truest self.</p>
+    </div>
+  </section>
+</main><footer>
+  <p>© 2026 Alice. All rights reserved.</p>
+</footer>
+    
+    <script>
+        const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, observerOptions);
+document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+function toggleAccordion(id) {
+  const content = document.getElementById(id);
+  const all = document.querySelectorAll('.accordion-content');
+  all.forEach(el => { if(el.id !== id) el.style.display = 'none'; });
+  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+    </script>
+</body>
+</html>

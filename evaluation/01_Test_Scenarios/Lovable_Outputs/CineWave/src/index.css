@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 100% 97%;
+    --foreground: 0 0% 8%;
+
+    --card: 340 60% 96%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 340 100% 97%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 322 55% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 30% 92%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 340 20% 94%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 322 55% 46%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 20% 88%;
+    --input: 340 20% 88%;
+    --ring: 322 55% 46%;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* CineWave custom tokens */
+    --cw-glow: 322 80% 60%;
+    --cw-dark: 0 0% 6%;
+    --cw-overlay: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 322 55% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 322 55% 46%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 322 55% 46%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 322 55% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 322 55% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  /* Focus visible styles */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+@layer components {
+  .cw-headline {
+    @apply text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-none;
+  }
+  .cw-subheadline {
+    @apply text-2xl md:text-3xl font-bold uppercase tracking-tight;
+  }
+  .cw-label {
+    @apply text-xs uppercase tracking-widest font-bold text-primary;
+  }
+  .cw-body {
+    @apply text-base leading-relaxed text-muted-foreground;
+  }
+  .cw-card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  .cw-gradient-overlay {
+    background: linear-gradient(to top, hsl(var(--cw-dark)) 0%, transparent 60%);
+  }
+}

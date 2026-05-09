@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Expert-verified textbooks and fun learning materials for every child.">
+    <title>About Us | Junior Learning</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: 'Helvetica', Arial, sans-serif; background-color: #FFFAFA; color: #333; display: flex; flex-direction: column; min-height: 100vh; } main { flex: 1; } header { background: #fff; padding: 1rem 2rem; border-bottom: 2px solid #eee; display: flex; justify-content: space-between; align-items: center; } nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold; } nav a.active { border-bottom: 2px solid #BF00FF; } .hero { padding: 4rem 2rem; text-align: center; background: #fff; } .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; } .btn-primary { background-color: #FFBF00; color: #000; padding: 1rem 2rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; } .btn-secondary { background-color: #BF00FF; color: #fff; padding: 0.8rem 1.5rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; } .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 2rem; max-width: 1200px; margin: 0 auto; } .book-card { background-color: #BF00FF; color: #fff; padding: 3rem 1.5rem; text-align: center; border-radius: 12px; text-decoration: none; transition: transform 0.2s; } .book-card:hover { transform: translateY(-5px); } .book-card svg { width: 60px; height: 60px; fill: #fff; margin-bottom: 1rem; } .search-container { padding: 2rem; text-align: center; } .search-input { width: 100%; max-width: 500px; padding: 1rem; border: 2px solid #BF00FF; border-radius: 8px; font-size: 1.1rem; } .breadcrumb { padding: 1rem 2rem; font-size: 0.9rem; color: #666; } .chapter-bar { background: #fff; border: 2px solid #eee; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; display: block; text-decoration: none; color: #333; font-weight: bold; text-decoration: underline; } .chapter-bar:hover { border-color: #BF00FF; } .sidebar { background: #fff; padding: 2rem; border-radius: 12px; border: 1px solid #eee; } footer { padding: 3rem; text-align: center; background: #fff; border-top: 2px solid #eee; } .hidden { display: none; } @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .grid { grid-template-columns: 1fr; } header { flex-direction: column; gap: 1rem; } }
+    </style>
+</head>
+<body>
+    <header><div style="font-size:1.5rem; font-weight:bold; color:#BF00FF;">Junior Learning</div><nav><a href="index">Home</a><a href="subject">Subjects</a><a href="resource">Resources</a><a href="about-us" class="active" aria-current="page">About</a></nav></header><main><section style="padding:5rem 2rem; text-align:center; max-width:800px; margin:0 auto;"><h1 style="font-size:3rem; margin-bottom:2rem;">Our Mission</h1><p style="font-size:1.8rem; line-height:1.4; font-weight:300;">We believe that every child deserves access to high-quality, expert-verified education without barriers. Junior Learning is a 100% free digital library built for the next generation of thinkers.</p></section><section class="grid"><div style="text-align:center; padding:2rem;"><svg style="width:80px; height:80px; fill:#BF00FF;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg><h2>Verified by Experts</h2><p>Every textbook is reviewed by professional educators.</p></div><div style="text-align:center; padding:2rem;"><svg style="width:80px; height:80px; fill:#BF00FF;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg><h2>Openly Licensed</h2><p>Free to use, share, and print for any classroom or home.</p></div></section></main><footer><a href="subject" class="btn-primary">Start Learning</a><p style="margin-top:2rem; color:#757575;">© 2026 Junior Learning. All rights reserved.</p></footer>
+    
+    <script>
+        function handleSearch(e) { const term = e.target.value.toLowerCase(); document.querySelectorAll('.book-card').forEach(card => { const title = card.querySelector('h2').innerText.toLowerCase(); card.classList.toggle('hidden', !title.includes(term)); }); } function downloadPDF(e) { e.preventDefault(); alert('Starting download for: ' + e.target.getAttribute('data-file')); }
+    </script>
+</body>
+</html>

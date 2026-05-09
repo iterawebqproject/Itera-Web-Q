@@ -1,0 +1,14 @@
+import Header from "./Header";
+import Footer from "./Footer";
+import SkipLink from "./SkipLink";
+
+const Layout = ({ children }: { children: React.ReactNode }) => (
+  <div className="flex min-h-screen flex-col">
+    <SkipLink />
+    <Header />
+    <main id="main-content" className="flex-1">{children}</main>
+    <Footer />
+  </div>
+);
+
+export default Layout;

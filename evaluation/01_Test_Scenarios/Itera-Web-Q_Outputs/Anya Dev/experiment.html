@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Crafting digital experiences with precision and code.">
+    <title>Experiments | Anya Dev</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Georgia', serif; margin: 0; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.6; } a { text-decoration: none; color: inherit; transition: color 0.3s ease; } .layout-wrapper { display: flex; flex: 1; width: 100%; max-width: 1400px; margin: 0 auto; } aside { width: 260px; border-right: 1px solid #1e293b; padding: 2rem; position: sticky; top: 0; height: calc(100vh - 4rem); display: flex; flex-direction: column; } main { flex: 1; padding: 3rem; overflow-x: hidden; } nav ul { list-style: none; padding: 0; margin: 2rem 0; } nav li { margin-bottom: 1rem; } nav a { font-size: 1.1rem; color: #94a3b8; display: flex; align-items: center; gap: 0.75rem; } nav a:hover, nav a.active { color: #a855f7; } .hero { margin-bottom: 4rem; } .hero h1 { font-size: 3.5rem; margin: 0; font-weight: normal; } .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; } .card { border: 1px solid #1e293b; padding: 1.5rem; transition: border-color 0.3s ease; display: block; } .card:hover { border-color: #a855f7; } .card-icon { margin-bottom: 1rem; display: block; } .card h3 { font-size: 1.5rem; margin: 0.5rem 0; font-weight: normal; } .badge { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; border: 1px solid #c084fc; color: #c084fc; background: rgba(168, 85, 247, 0.1); margin-top: 1rem; } .avatar-large { width: 120px; height: 120px; margin-bottom: 2rem; color: #a855f7; } .skill-list { list-style: none; padding: 0; } .skill-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; padding: 1rem; border: 1px solid #1e293b; } .social-row { display: flex; gap: 1.5rem; margin-top: 2rem; } .social-row svg:hover { color: #a855f7; cursor: pointer; } .callout { border-left: 4px solid #a855f7; padding: 1.5rem; background: #1e293b; margin: 2rem 0; display: flex; gap: 1rem; } footer { border-top: 1px solid #1e293b; padding: 2rem; text-align: center; font-size: 0.9rem; color: #94a3b8; } @media (max-width: 768px) { .layout-wrapper { flex-direction: column; } aside { width: auto; height: auto; border-right: none; border-bottom: 1px solid #1e293b; position: static; } .hero h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <header style="display:none;"></header><div class="layout-wrapper"><aside><div class="brand"><strong>Anya Dev</strong></div><nav><ul><li><a href="index">Home</a></li><li><a href="blog">Blog</a></li><li><a href="project">Projects</a></li><li><a href="experiment" class="active">Experiments</a></li><li><a href="about-me">About</a></li></ul></nav></aside><main><h1>Digital Garden</h1><div class="grid"><a href="experiment-detail" class="card"><span class="card-icon">🧪</span><h3>WebGPU Fluid Sim</h3><p>Testing high-performance physics in the browser environment.</p><span class="badge">WIP</span></a><a href="#" class="card"><span class="card-icon">🧪</span><h3>Variable Font Motion</h3><p>Using scroll position to drive font-weight transitions.</p><span class="badge">Done</span></a><a href="#" class="card"><span class="card-icon">🧪</span><h3>Audio Reactive SVG</h3><p>Visualizing microphone input through vector manipulation.</p><span class="badge">Done</span></a></div></main></div><footer><p>© 2026 Anya Dev. Built with precision.</p></footer>
+    
+    <script>
+        document.querySelectorAll('nav a').forEach(link => { if(link.href === window.location.href) link.classList.add('active'); });
+    </script>
+</body>
+</html>

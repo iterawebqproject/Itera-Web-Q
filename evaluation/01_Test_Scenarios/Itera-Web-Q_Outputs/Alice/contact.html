@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="A space for self-growth stories and wellness essentials.">
+    <title>Contact | Alice | Alice</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; background-color: #F5F2ED; color: #333; line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3, .editorial-font { font-family: 'Georgia', serif; font-weight: normal; }
+a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+header { position: sticky; top: 0; background: #F5F2ED; z-index: 1000; border-bottom: 1px solid rgba(226, 88, 34, 0.1); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+nav a { margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; position: relative; }
+nav a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -4px; left: 0; background-color: #E25822; transition: width 0.3s ease; }
+nav a:hover::after, nav a[aria-current="page"]::after { width: 100%; }
+nav a:hover, nav a[aria-current="page"] { color: #E25822; }
+main { flex: 1; }
+section { padding: 80px 10%; opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+section.visible { opacity: 1; transform: translateY(0); }
+.btn { display: inline-block; padding: 12px 30px; background: #d14711; color: #fff; border: none; cursor: pointer; transition: opacity 0.3s; }
+.btn:hover { opacity: 0.9; }
+.icon-svg { width: 48px; height: 48px; fill: #333; transition: fill 0.3s ease; }
+.card:hover .icon-svg { fill: #E25822; }
+.card { transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-5px); }
+footer { padding: 40px 10%; background: #F5F2ED; border-top: 1px solid #ddd; text-align: center; font-size: 0.8rem; color: #070707; }
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 1rem; }
+  nav a { margin: 0 10px; font-size: 0.8rem; }
+  section { padding: 40px 5%; }
+  h1 { font-size: 2.5rem !important; }
+  .grid-mobile-stack { grid-template-columns: 1fr !important; gap: 30px !important; }
+  .flex-mobile-stack { flex-direction: column !important; gap: 30px !important; }
+}
+    </style>
+</head>
+<body>
+    <header>
+  <div class="brand-logo editorial-font" style="font-size: 1.5rem; color: #E25822;">Alice</div>
+  <nav>
+    <a href="index">Home</a>
+    <a href="alice-profile">Profile</a>
+    <a href="product">Shop</a>
+    <a href="contact" aria-current="page">Contact</a>
+  </nav>
+</header><main>
+  <section style="text-align: center;">
+    <h1 class="editorial-font" style="font-size: 3rem;">Let's Grow Together</h1>
+    <svg class="icon-svg" viewBox="0 0 24 24" style="width: 30px;"><path d="M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"></path></svg>
+  </section>
+  <section style="max-width: 600px; margin: 0 auto;">
+    <form style="display: flex; flex-direction: column; gap: 30px;">
+      <label style="display: flex; flex-direction: column;">
+        <span style="font-size: 0.7rem; margin-bottom: 5px;">NAME</span>
+        <input type="text" aria-label="Name" placeholder="NAME" style="background: transparent; border: none; border-bottom: 1px solid #333; padding: 10px 0; outline: none;">
+      </label>
+      <label style="display: flex; flex-direction: column;">
+        <span style="font-size: 0.7rem; margin-bottom: 5px;">EMAIL</span>
+        <input type="email" aria-label="Email" placeholder="EMAIL" style="background: transparent; border: none; border-bottom: 1px solid #333; padding: 10px 0; outline: none;">
+      </label>
+      <label style="display: flex; flex-direction: column;">
+        <span style="font-size: 0.7rem; margin-bottom: 5px;">MESSAGE</span>
+        <textarea aria-label="Message" placeholder="MESSAGE" rows="4" style="background: transparent; border: none; border-bottom: 1px solid #333; padding: 10px 0; outline: none; resize: none;"></textarea>
+      </label>
+      <button type="submit" class="btn" style="align-self: flex-start;">Send Message</button>
+    </form>
+  </section>
+  <section style="text-align: center;">
+    <div class="flex-mobile-stack" style="display: flex; justify-content: center; gap: 30px; font-size: 0.9rem; letter-spacing: 1px;">
+      <a href="#" style="border-bottom: 1px solid transparent;" onmouseover="this.style.borderColor='#E25822'" onmouseout="this.style.borderColor='transparent'">INSTAGRAM</a>
+      <a href="#" style="border-bottom: 1px solid transparent;" onmouseover="this.style.borderColor='#E25822'" onmouseout="this.style.borderColor='transparent'">LINKEDIN</a>
+      <a href="#" style="border-bottom: 1px solid transparent;" onmouseover="this.style.borderColor='#E25822'" onmouseout="this.style.borderColor='transparent'">PINTEREST</a>
+    </div>
+  </section>
+</main><footer>
+  <p>© 2026 Alice. All rights reserved.</p>
+</footer>
+    
+    <script>
+        const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, observerOptions);
+document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+function toggleAccordion(id) {
+  const content = document.getElementById(id);
+  const all = document.querySelectorAll('.accordion-content');
+  all.forEach(el => { if(el.id !== id) el.style.display = 'none'; });
+  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+    </script>
+</body>
+</html>

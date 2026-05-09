@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Expert-verified textbooks and fun learning materials for every child.">
+    <title>Junior Learning | Free K-6 Educational Resources</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: 'Helvetica', Arial, sans-serif; background-color: #FFFAFA; color: #333; display: flex; flex-direction: column; min-height: 100vh; } main { flex: 1; } header { background: #fff; padding: 1rem 2rem; border-bottom: 2px solid #eee; display: flex; justify-content: space-between; align-items: center; } nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold; } nav a.active { border-bottom: 2px solid #BF00FF; } .hero { padding: 4rem 2rem; text-align: center; background: #fff; } .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; } .btn-primary { background-color: #FFBF00; color: #000; padding: 1rem 2rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; } .btn-secondary { background-color: #BF00FF; color: #fff; padding: 0.8rem 1.5rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; } .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 2rem; max-width: 1200px; margin: 0 auto; } .book-card { background-color: #BF00FF; color: #fff; padding: 3rem 1.5rem; text-align: center; border-radius: 12px; text-decoration: none; transition: transform 0.2s; } .book-card:hover { transform: translateY(-5px); } .book-card svg { width: 60px; height: 60px; fill: #fff; margin-bottom: 1rem; } .search-container { padding: 2rem; text-align: center; } .search-input { width: 100%; max-width: 500px; padding: 1rem; border: 2px solid #BF00FF; border-radius: 8px; font-size: 1.1rem; } .breadcrumb { padding: 1rem 2rem; font-size: 0.9rem; color: #666; } .chapter-bar { background: #fff; border: 2px solid #eee; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; display: block; text-decoration: none; color: #333; font-weight: bold; text-decoration: underline; } .chapter-bar:hover { border-color: #BF00FF; } .sidebar { background: #fff; padding: 2rem; border-radius: 12px; border: 1px solid #eee; } footer { padding: 3rem; text-align: center; background: #fff; border-top: 2px solid #eee; } .hidden { display: none; } @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .grid { grid-template-columns: 1fr; } header { flex-direction: column; gap: 1rem; } }
+    </style>
+</head>
+<body>
+    <header><div style="font-size:1.5rem; font-weight:bold; color:#BF00FF;">Junior Learning</div><nav><a href="index" class="active" aria-current="page">Home</a><a href="subject">Subjects</a><a href="resource">Resources</a><a href="about-us">About</a></nav></header><main><section class="hero"><h1>Quality Education,<br>Made Easy for Kids.</h1><a href="subject" class="btn-primary">Find Your Subject</a></section><section class="grid"><a href="subject-detail" class="book-card"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg><h2>Mathematics</h2></a><a href="subject-detail" class="book-card"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg><h2>Science</h2></a></section></main><footer><a href="subject" class="btn-primary">Start Learning</a><p style="margin-top:2rem; color:#757575;">© 2026 Junior Learning. All rights reserved.</p></footer>
+    
+    <script>
+        function handleSearch(e) { const term = e.target.value.toLowerCase(); document.querySelectorAll('.book-card').forEach(card => { const title = card.querySelector('h2').innerText.toLowerCase(); card.classList.toggle('hidden', !title.includes(term)); }); } function downloadPDF(e) { e.preventDefault(); alert('Starting download for: ' + e.target.getAttribute('data-file')); }
+    </script>
+</body>
+</html>

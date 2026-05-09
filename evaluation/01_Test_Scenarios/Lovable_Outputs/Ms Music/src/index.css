@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 3% 89%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 293 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 40 2% 82%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 293 60% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 75%;
+    --input: 0 0% 75%;
+    --ring: 293 100% 50%;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 293 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 293 60% 95%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 293 100% 50%;
+
+    /* Custom tokens */
+    --editorial-gradient: linear-gradient(135deg, hsl(293 100% 50%), hsl(320 100% 40%));
+    --header-blur: saturate(180%) blur(20px);
+    --shadow-editorial: 0 20px 60px -15px hsl(0 0% 0% / 0.25);
+    --shadow-card-hover: 0 30px 60px -12px hsl(293 100% 50% / 0.15);
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 293 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 85%;
+    --secondary-foreground: 0 0% 8%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 293 60% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 293 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .editorial-gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--editorial-gradient);
+  }
+
+  .editorial-gradient-bg {
+    background-image: var(--editorial-gradient);
+  }
+
+  .glass-header {
+    backdrop-filter: var(--header-blur);
+    -webkit-backdrop-filter: var(--header-blur);
+  }
+
+  .slant-section {
+    clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+  }
+
+  .hover-bw-to-color {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+  .hover-bw-to-color:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+  }
+
+  .score-badge {
+    @apply inline-flex items-center justify-center font-black text-sm px-3 py-1 rounded-sm;
+  }
+  .score-badge-high {
+    @apply bg-primary text-primary-foreground;
+  }
+  .score-badge-mid {
+    @apply bg-secondary text-secondary-foreground;
+  }
+  .score-badge-low {
+    @apply bg-muted text-muted-foreground;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus-visible global enhancement */
+:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}

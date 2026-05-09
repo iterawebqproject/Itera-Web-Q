@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="The standard for world-class journalism and deep analytical stories.">
+    <title>Olympics 2026 | Legacy Media</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #FFF5EE; color: #333; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+h1, h2, h3, .serif { font-family: 'Times New Roman', serif; color: #1a1a1a; }
+header { position: sticky; top: 0; background: #FFF5EE; border-bottom: 1px solid #e0e0e0; z-index: 1000; transition: all 0.3s ease; padding: 1rem 5%; }
+header.scrolled { padding: 0.5rem 5%; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Times New Roman', serif; font-size: 1.8rem; font-weight: bold; color: #800020; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
+.btn-subscribe { background: #800020; color: #fff !important; padding: 8px 20px; border-radius: 2px; }
+main { flex: 1; }
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+.hero { position: relative; text-align: center; margin-bottom: 4rem; }
+.hero img { width: 100%; height: 70vh; object-fit: cover; }
+.hero-overlay { padding: 2rem; }
+.hero-overlay h1 { font-size: 3.5rem; margin: 1rem 0; }
+.news-feed { border-top: 1px solid #333; }
+.news-item { border-bottom: 1px solid #e0e0e0; padding: 1.5rem 0; text-decoration: none; display: block; color: inherit; }
+.news-item:hover h3 { color: #800020; }
+.portrait-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+.portrait-card { text-decoration: none; color: inherit; overflow: hidden; }
+.portrait-card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: grayscale(100%); transition: transform 0.4s ease; }
+.portrait-card:hover img { transform: scale(1.05); filter: grayscale(0%); }
+.portrait-card:hover .name { color: #800020; }
+.portrait-card .name { font-weight: bold; font-size: 1.2rem; margin-top: 10px; display: block; transition: color 0.3s; }
+.newsletter-box { background: #800020; color: #fff; padding: 4rem 2rem; text-align: center; margin-top: 4rem; }
+.newsletter-box h2 { font-weight: 700; }
+.newsletter-box input { padding: 10px; width: 300px; border: none; }
+.newsletter-box button { padding: 10px 20px; background: #1a1a1a; color: #fff; border: none; cursor: pointer; }
+.badge { display: inline-block; background: #eee; padding: 4px 8px; font-size: 0.7rem; font-weight: bold; letter-spacing: 1px; margin-bottom: 1rem; }
+.progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 1001; }
+.progress-bar { height: 4px; background: #800020; width: 0%; }
+footer { background: #1a1a1a; color: #fff; padding: 3rem 5%; text-align: center; font-size: 0.8rem; }
+.medal-table { width: 100%; border-collapse: collapse; margin: 2rem 0; min-height: 400px; }
+.medal-table th, .medal-table td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+.medal-table th { cursor: pointer; background: #f0f0f0; }
+.article-body { max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+.pull-quote { font-family: 'Times New Roman', serif; font-size: 2rem; font-style: italic; color: #800020; border-left: 4px solid #800020; padding-left: 2rem; margin: 2rem -2rem; }
+.author-pill { display: inline-flex; align-items: center; gap: 10px; background: #fff; padding: 10px 20px; border-radius: 50px; border: 1px solid #ddd; margin-top: 3rem; text-decoration: underline; color: #800020; }
+.live-news-feed { margin: 3rem 0; padding-top: 1rem; border-top: 2px solid #1a1a1a; }
+.feed-item { display: flex; gap: 15px; padding: 1rem 0; border-bottom: 1px solid #e0e0e0; }
+.live-badge { color: #800020; font-weight: bold; font-size: 0.75rem; border: 1px solid #800020; padding: 2px 6px; border-radius: 3px; height: fit-content; }
+@media (max-width: 768px) {
+  .portrait-grid { grid-template-columns: 1fr; }
+  .nav-links { flex-direction: column; gap: 10px; }
+  .hero-overlay h1 { font-size: 2rem; }
+}
+    </style>
+</head>
+<body>
+    <header><nav><div class="nav-links"><a href="index">Home</a></div><a href="index" class="logo">Legacy Media</a><div class="nav-links"><a href="#" class="btn-subscribe">Subscribe</a></div></nav></header><main class="container"><h1>Winter Olympics 2026</h1><div style="margin: 2rem 0;"><button onclick="sortTable('gold')">Sort by Gold</button> <button onclick="sortTable('total')">Sort by Total</button></div><table class="medal-table" id="olympicTable"><tr style="background:#eee;"><th>Country</th><th>Gold</th><th>Silver</th><th>Bronze</th><th>Total</th></tr><tr data-gold="12" data-total="30"><td>Norway</td><td>12</td><td>10</td><td>8</td><td>30</td></tr><tr data-gold="10" data-total="32"><td>USA</td><td>10</td><td>12</td><td>10</td><td>32</td></tr><tr data-gold="14" data-total="28"><td>Germany</td><td>14</td><td>7</td><td>7</td><td>28</td></tr></table><section class="live-news-feed"><h2>Live Updates</h2><div class="feed-item"><span class="live-badge">LIVE</span><div><strong>14:22</strong> - Men's Slalom: Erik S&ouml;rensen takes Gold for Norway.</div></div><div class="feed-item"><span class="live-badge">LIVE</span><div><strong>13:45</strong> - Women's Figure Skating: Final scores being calculated.</div></div><div class="feed-item"><span class="live-badge">LIVE</span><div><strong>12:10</strong> - Speed Skating: New Olympic record set in 500m.</div></div></section><div class="portrait-grid"><div><div class="badge">ATHLETE SPOTLIGHT</div><div class="portrait-card"><img src="assets/generated-e989a169663f.webp" alt="Athlete" decoding="async" width="640" height="480" loading="eager" fetchpriority="high"><span class="name">Erik S&ouml;rensen</span><p>Alpine Skiing Legend</p></div></div><div><div class="badge">ATHLETE SPOTLIGHT</div><div class="portrait-card"><img src="assets/generated-e989a169663f.webp" alt="Athlete" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low"><span class="name">Mikaela Shiffrin</span><p>The Final Run</p></div></div></div></main><footer><div class="container"><p>&copy; 2026 Legacy Media. All rights reserved.</p><div style="margin-top:1rem; display:flex; justify-content:center; gap:20px;"><a href="about-us" style="color:#fff; text-decoration:none;">About</a><a href="people-of-the-year" style="color:#fff; text-decoration:none;">People of the Year</a><a href="olympics-2026" style="color:#fff; text-decoration:none;">Olympics</a></div></div></footer>
+    
+    <script>
+        window.onscroll = function() {
+  const header = document.querySelector('header');
+  const progress = document.querySelector('.progress-bar');
+  const scroll = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (scroll / height) * 100;
+  
+  if (scroll > 50) { header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
+  if (progress) { progress.style.width = scrolled + '%'; }
+};
+
+function sortTable(criteria) {
+  const table = document.getElementById('olympicTable');
+  if(!table) return;
+  const rows = Array.from(table.rows).slice(1);
+  rows.sort((a, b) => {
+    const valA = parseInt(a.getAttribute('data-' + criteria));
+    const valB = parseInt(b.getAttribute('data-' + criteria));
+    return valB - valA;
+  });
+  rows.forEach(row => table.appendChild(row));
+}
+    </script>
+</body>
+</html>

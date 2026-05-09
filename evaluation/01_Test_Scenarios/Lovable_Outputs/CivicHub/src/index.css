@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 97%;
+    --foreground: 207 100% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 207 100% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 100% 12%;
+
+    --primary: 203 100% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 203 30% 90%;
+    --secondary-foreground: 203 100% 21%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 44 90% 55%;
+    --accent-foreground: 207 100% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 203 100% 21%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 203 100% 21%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 203 30% 90%;
+    --sidebar-accent-foreground: 203 100% 21%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 203 100% 21%;
+
+    --civic-gold: 44 90% 55%;
+    --civic-light-blue: 203 60% 94%;
+    --civic-success: 152 60% 42%;
+    --civic-warning: 38 92% 50%;
+    --civic-info: 203 80% 50%;
+    --alert-bg: 0 72% 51%;
+    --alert-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 207 100% 6%;
+    --foreground: 210 40% 98%;
+    --card: 207 80% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 207 80% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 203 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 203 40% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 207 40% 16%;
+    --muted-foreground: 210 20% 60%;
+    --accent: 44 90% 55%;
+    --accent-foreground: 207 100% 6%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 207 40% 18%;
+    --input: 207 40% 18%;
+    --ring: 203 80% 50%;
+    --sidebar-background: 207 100% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 203 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 203 40% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 207 40% 18%;
+    --sidebar-ring: 203 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .civic-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .civic-card {
+    @apply bg-card rounded-xl border border-border p-6 shadow-sm hover-scale cursor-pointer;
+  }
+
+  .civic-section {
+    @apply py-16;
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Underground cinema, viral pop-culture, and the future of film.">
+    <title>Review | CineWave</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #FFF0F5; color: #1a1a1a; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; } main { flex: 1; } header { background: #FFF0F5; border-bottom: 2px solid #B53389; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; } .logo { font-weight: 900; font-size: 1.8rem; color: #B53389; text-decoration: none; text-transform: uppercase; letter-spacing: -1px; } nav a { margin-left: 20px; text-decoration: none; color: #1a1a1a; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; } nav a:hover, nav a.active { color: #B53389; text-decoration: underline; } footer { background: #1a1a1a; color: #FFF0F5; padding: 3rem 5%; text-align: center; } .hero { padding: 100px 5%; background: #B53389; color: #FFF0F5; text-align: center; } .hero h1 { font-size: clamp(3rem, 10vw, 6rem); margin: 0; line-height: 0.9; text-transform: uppercase; } .masonry-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 40px 5%; } .card { background: #fff; border: 1px solid #B53389; padding: 0; overflow: hidden; transition: transform 0.3s; } .card:hover { transform: translateY(-5px); } .card img { width: 100%; height: 250px; object-fit: cover; display: block; } .card-content { padding: 20px; } .card-tag { color: #B53389; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; } .btn { background: #B53389; color: #fff; padding: 12px 24px; border: none; cursor: pointer; font-weight: bold; text-transform: uppercase; text-decoration: none; display: inline-block; } .newsletter-modal { border: none; padding: 40px; width: 90%; max-width: 500px; background: #FFF0F5; border: 4px solid #B53389; } .newsletter-modal::backdrop { background: rgba(0,0,0,0.8); } .editorial-header { max-width: 800px; margin: 60px auto; padding: 0 20px; } .editorial-header h1 { font-size: 4rem; line-height: 1; margin-bottom: 20px; } .content-body { max-width: 800px; margin: 0 auto 100px; padding: 0 20px; font-size: 1.2rem; } .full-img { width: 100%; height: 60vh; object-fit: cover; margin: 40px 0; } @media (max-width: 768px) { .masonry-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 3rem; } }
+    </style>
+</head>
+<body>
+    <header><a href="index" class="logo">CineWave</a><nav><a href="index">Home</a><a href="movie">Movies</a><a href="trends">Trends</a></nav></header><main><article class="editorial-header"><h1>THE VOID WITHIN: A STUDY OF MINIMALIST HORROR</h1><p style="font-weight:bold; color:#B53389;">By Alex Rivera | 5 Min Read</p></article><section class="content-body"><p>In the age of sensory overload, the most terrifying thing a filmmaker can offer is nothing. Minimalist horror is seeing a resurgence among Gen-Z creators who find the 'liminal space' aesthetic more haunting than any jump scare.</p><p>We dive deep into the cinematography of silence and why the absence of music is the new soundtrack of fear.</p></section><section class="masonry-grid"><div class="card"><div class="card-content"><h2>Related: The Rise of Analog Horror</h2></div></div><div class="card"><div class="card-content"><h2>Related: Sound Design in Space</h2></div></div></section></main><footer><div style="margin-bottom: 20px;"><a href="index" class="logo" style="color:#FFF0F5">CineWave</a></div><p>Subscribe to get the latest trends before anyone else.</p><form style="margin: 20px 0;" aria-label="Newsletter Subscription"><input type="email" placeholder="your@email.com" aria-label="Email Address" style="padding: 10px; border: none; width: 250px;"><button class="btn" type="submit">Join</button></form><p>© 2026 CineWave. All rights reserved.</p></footer>
+    
+    <script>
+        const modal = document.querySelector('#newsletterModal'); let modalShown = false; window.addEventListener('scroll', () => { if (!modalShown && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) { if(modal) { modal.showModal(); modalShown = true; } } }); function closeModal() { if(modal) modal.close(); }
+    </script>
+</body>
+</html>

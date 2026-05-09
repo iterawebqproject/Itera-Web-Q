@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 23% 94%;
+    --foreground: 30 10% 15%;
+
+    --card: 30 20% 97%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 30 20% 97%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 16 76% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 15% 88%;
+    --secondary-foreground: 30 10% 20%;
+
+    --muted: 30 15% 90%;
+    --muted-foreground: 30 8% 50%;
+
+    --accent: 16 76% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 16 76% 51%;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 30 20% 97%;
+    --sidebar-foreground: 30 10% 15%;
+    --sidebar-primary: 16 76% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 15% 90%;
+    --sidebar-accent-foreground: 30 10% 15%;
+    --sidebar-border: 30 15% 85%;
+    --sidebar-ring: 16 76% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 8px 30px -12px hsl(var(--primary) / 0.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

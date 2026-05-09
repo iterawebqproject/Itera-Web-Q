@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="The future of repairable, modular computing.">
+    <title>Shop Categories | ElementModular</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: Arial, sans-serif; background-color: #F4F4F4; color: #333; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+header { background: #FFF; border-bottom: 1px solid #ddd; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+nav a { margin-left: 20px; text-decoration: none; color: #006387; font-weight: bold; font-size: 0.9rem; }
+nav a.active { text-decoration: underline; }
+.hero { background-color: #df7b10; padding: 60px 5%; display: flex; align-items: center; justify-content: space-between; min-height: 400px; }
+.hero-content { flex: 1; }
+.hero-img { flex: 1; text-align: center; }
+.hero-img img { max-width: 100%; height: auto; object-fit: cover; }
+.btn-primary { background: #006387; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; }
+.mission-bar { background: #FFF; padding: 40px 5%; display: flex; align-items: center; gap: 40px; }
+.product-spotlight { padding: 0; }
+.spotlight-row { display: flex; align-items: center; color: white; padding: 60px 5%; }
+.spotlight-row.desktop { background: #006387; }
+.spotlight-row.laptop { background: #2D5A27; flex-direction: row-reverse; }
+.marquee { background: #FFF; overflow: hidden; padding: 20px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.marquee-inner { display: flex; gap: 50px; animation: scroll 20s linear infinite; width: max-content; }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.manifesto { padding: 80px 5%; text-align: center; background: #F4F4F4; }
+.manifesto h2 { font-size: 3rem; color: #006387; }
+.badge { background: #b75f00; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; font-weight: bold; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 5%; }
+.card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.anatomy-container { position: relative; background: #b75f00; padding: 100px 5%; text-align: center; overflow: hidden; }
+.component-part { transition: transform 0.3s ease; cursor: help; }
+.component-part:hover { transform: scale(1.1); }
+footer { background: #222; color: #ccc; padding: 40px 5%; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+.footer-bottom { border-top: 1px solid #444; margin-top: 40px; padding-top: 20px; text-align: center; font-size: 0.8rem; }
+#anatomy-dialog { padding: 20px; border-radius: 8px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 400px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+@media (max-width: 768px) { .hero, .mission-bar, .spotlight-row, .footer-grid, .grid-3 { flex-direction: column !important; text-align: center; } .hero-img, .mission-bar div, .spotlight-row div { padding: 0 !important; } }
+    </style>
+</head>
+<body>
+    <header>
+  <div class="logo" style="font-weight:900; font-size:1.5rem; color:#006387;">ELEMENT<span style="color:#df7b10">MODULAR</span></div>
+  <nav>
+    <a href="index">Home</a>
+    <a href="categories" class="active" aria-current="page">Shop</a>
+    <a href="product-overview">Anatomy</a>
+    <a href="spec-sheet">Specs</a>
+    <a href="about-us">About</a>
+  </nav>
+</header><main style="flex:1;">
+  <h1 class="sr-only">Shop Our Modular Categories</h1>
+  <div style="text-align:center; padding: 40px 5%;">
+    <div style="display:inline-flex; background:#ddd; border-radius:30px; padding:5px;">
+      <button onclick="toggleCategory('laptop')" style="padding:10px 20px; border:none; border-radius:25px; cursor:pointer; background:#006387; color:white;">Laptops</button>
+      <button onclick="toggleCategory('desktop')" style="padding:10px 20px; border:none; border-radius:25px; cursor:pointer; background:transparent;">Desktops</button>
+    </div>
+  </div>
+
+  <div class="grid-3">
+    <div class="card product-card" data-type="laptop">
+      <img src="assets/generated-ffe3fc7e441c.webp" alt="Laptop" style="width:100%; border-radius:4px; object-fit: cover;" decoding="async" width="640" height="480" loading="eager" fetchpriority="high">
+      <h3>Element 13 Laptop</h3>
+      <p>Starting at $999</p>
+      <span class="badge">Customizable</span>
+    </div>
+    <div class="card product-card" data-type="laptop">
+      <img src="assets/generated-b58ffb423a54.webp" alt="Laptop" style="width:100%; border-radius:4px; object-fit: cover;" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low">
+      <h3>Element 16 Pro</h3>
+      <p>Starting at $1,499</p>
+      <span class="badge">User Upgradeable</span>
+    </div>
+    <div class="card product-card" data-type="desktop">
+      <img src="assets/generated-d1a953cac5e7.webp" alt="Desktop" style="width:100%; border-radius:4px; object-fit: cover;" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low">
+      <h3>Modular Station V1</h3>
+      <p>Starting at $1,200</p>
+      <span class="badge">100% Recyclable</span>
+    </div>
+  </div>
+
+  <section style="padding: 60px 5%; background: #FFF;">
+    <h2 style="text-align:center">Cross-Platform Ecosystem</h2>
+    <div class="grid-3">
+      <div class="card" style="border-left: 5px solid #b75f00;">
+        <h3>Shared Mainboards</h3>
+        <p>Our laptop mainboards can be repurposed into standalone desktop PCs using our open-source cases.</p>
+      </div>
+      <div class="card" style="border-left: 5px solid #b75f00;">
+        <h3>Expansion Cards</h3>
+        <p>The same USB-C, HDMI, and Storage modules work across every device we sell.</p>
+      </div>
+      <div class="card" style="border-left: 5px solid #b75f00;">
+        <h3>Memory & Storage</h3>
+        <p>Standard SODIMM and M.2 slots. No soldered components, ever.</p>
+      </div>
+    </div>
+  </section>
+</main><footer>
+  <div class="footer-grid">
+    <div>
+      <h3 style="color:white">Newsletter</h3>
+      <p>Get repair guides and product updates.</p>
+      <input type="email" aria-label="Email address for newsletter" placeholder="Email address" style="padding:10px; width:100%; margin-bottom:10px; border:none; border-radius:4px;">
+      <button class="btn-primary" style="width:100%">Subscribe</button>
+    </div>
+    <div>
+      <h3 style="color:white">Products</h3>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="categories" style="color:#ccc; text-decoration:none;">Laptops</a></li>
+        <li><a href="categories" style="color:#ccc; text-decoration:none;">Desktops</a></li>
+        <li><a href="#" style="color:#ccc; text-decoration:none;">Expansion Cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:white">Resources</h3>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="spec-sheet" style="color:#ccc; text-decoration:none;">Repair Manuals</a></li>
+        <li><a href="about-us" style="color:#ccc; text-decoration:none;">Community</a></li>
+        <li><a href="#" style="color:#ccc; text-decoration:none;">Blueprints</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 ElementModular. All rights reserved. Right to Repair Advocate.</p>
+  </div>
+</footer>
+    
+    <script>
+        function openAnatomy(name, desc, potential) {
+  const dialog = document.getElementById('anatomy-dialog');
+  dialog.innerHTML = `<h3>${name}</h3><p>${desc}</p><p><strong>Upgrade Potential:</strong> ${potential}</p><button onclick="this.closest('dialog').close()">Close</button>`;
+  dialog.showModal();
+}
+
+function toggleCategory(type) {
+  document.querySelectorAll('.product-card').forEach(card => {
+    if (card.dataset.type === type || type === 'all') {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function toggleSpecs(mode) {
+  const basic = document.querySelectorAll('.spec-basic');
+  const pro = document.querySelectorAll('.spec-pro');
+  if (mode === 'pro') {
+    pro.forEach(el => el.style.display = 'table-row');
+  } else {
+    pro.forEach(el => el.style.display = 'none');
+  }
+}
+    </script>
+</body>
+</html>

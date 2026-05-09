@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Create a journal that is perfect for you.">
+    <title>Mix &amp; Bind | Custom Notebooks &amp; Stationery</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: 'Helvetica', Arial, sans-serif; background-color: #F5F5F5; color: #333; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.5; }
+header { background: #FFF; border-bottom: 2px solid #EEE; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; transition: color 0.2s; }
+nav a:hover { color: #e87500; }
+nav a.active { color: #e87500; border-bottom: 2px solid #e87500; }
+.logo { font-size: 1.5rem; font-weight: 900; color: #e87500; text-transform: uppercase; letter-spacing: -1px; }
+footer { background: #333; color: #FFF; padding: 3rem 5%; text-align: center; font-size: 0.8rem; }
+.btn { display: inline-block; padding: 1rem 2rem; background: #e87500; color: #FFF; text-decoration: none; font-weight: bold; border-radius: 4px; border: none; cursor: pointer; transition: transform 0.2s; }
+.btn:hover { transform: translateY(-2px); }
+.grid { display: grid; gap: 2rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+.hero-tangerine { background: #e87500; color: #FFF; padding: 6rem 5%; text-align: center; background-image: radial-gradient(#ff9933 1px, transparent 1px); background-size: 20px 20px; }
+.hero-tangerine h1 { font-size: 4rem; margin: 0; text-transform: uppercase; line-height: 0.9; }
+.card { background: #FFF; padding: 2rem; border: 1px solid #EEE; transition: border-color 0.3s; }
+.card:hover { border-color: #e87500; }
+.ghost-card { border: 1px solid #DDD; background: #FFF; padding: 1rem; position: relative; }
+.sidebar-layout { display: flex; gap: 3rem; }
+.sidebar { width: 250px; flex-shrink: 0; }
+.main-content { flex: 1; }
+.pattern-dot { background-image: radial-gradient(#CCC 1px, transparent 1px); background-size: 10px 10px; height: 150px; border: 1px solid #EEE; }
+.pattern-line { background: repeating-linear-gradient(0deg, #EEE, #EEE 1px, #FFF 1px, #FFF 20px); height: 150px; border: 1px solid #EEE; }
+.pattern-grid { background-image: linear-gradient(#EEE 1px, transparent 1px), linear-gradient(90deg, #EEE 1px, transparent 1px); background-size: 20px 20px; height: 150px; border: 1px solid #EEE; }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.matrix-table td, .matrix-table th { padding: 1rem; border-bottom: 1px solid #EEE; text-align: left; }
+.dot-rating { color: #ba5d00; }
+.scroll-x { display: flex; overflow-x: auto; gap: 1.5rem; padding-bottom: 1rem; }
+.scroll-x .card { min-width: 250px; flex-shrink: 0; }
+@media (max-width: 768px) { .sidebar-layout { flex-direction: column; } .hero-tangerine h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <header>
+  <div class="logo">Mix & Bind</div>
+  <nav>
+    <a href="index" class="active" aria-current="page">Home</a>
+    <a href="books">Books</a>
+    <a href="paper-textures">Paper</a>
+    <a href="how-to-diy">How-To</a>
+    <a href="about-us">About</a>
+  </nav>
+</header><main style="flex:1;">
+  <section class="hero-tangerine">
+    <h1>MAKE YOUR<br>OWN MARK</h1>
+    <p style="font-size: 1.2rem; margin: 2rem 0;">Custom journals for the curious and the creative.</p>
+    <a href="how-to-diy" class="btn" style="background:#000;">Start Crafting</a>
+  </section>
+
+  <section class="container">
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+      <div style="text-align:center;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e87500" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M12 18h4"></path></svg>
+        <h2>Covers</h2>
+      </div>
+      <div style="text-align:center;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e87500" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h10"></path></svg>
+        <h2>Paper</h2>
+      </div>
+      <div style="text-align:center;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e87500" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+        <h2>Sizes</h2>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#FFF; padding: 6rem 5%; text-align:center;">
+    <h2 style="font-size: 3.5rem; max-width: 900px; margin: 0 auto; line-height: 1.1;">
+      We believe every <span style="color:#e87500; border-bottom: 4px solid;">great idea</span> deserves a home that feels exactly like <span style="background:#e87500; color:#FFF; padding: 0 10px;">you</span>.
+    </h2>
+  </section>
+
+  <section class="container">
+    <h2 style="margin-bottom: 2rem;">Featured Layouts</h2>
+    <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="ghost-card">
+        <div style="background:#EEE; aspect-ratio: 1/1; margin-bottom: 1rem; display:flex; align-items:center; justify-content:center;">
+          <svg width="100" height="100" viewBox="0 0 24 24" fill="#CCC"><rect x="5" y="3" width="14" height="18"></rect></svg>
+        </div>
+        <strong>The Minimalist</strong>
+        <p>$24.00</p>
+      </div>
+      <div class="ghost-card">
+        <div style="background:#EEE; aspect-ratio: 1/1; margin-bottom: 1rem; display:flex; align-items:center; justify-content:center;">
+          <svg width="100" height="100" viewBox="0 0 24 24" fill="#e87500"><rect x="5" y="3" width="14" height="18"></rect></svg>
+        </div>
+        <strong>The Bold Tangerine</strong>
+        <p>$28.00</p>
+      </div>
+      <div class="ghost-card">
+        <div style="background:#EEE; aspect-ratio: 1/1; margin-bottom: 1rem; display:flex; align-items:center; justify-content:center;">
+          <svg width="100" height="100" viewBox="0 0 24 24" fill="#333"><rect x="5" y="3" width="14" height="18"></rect></svg>
+        </div>
+        <strong>The Architect</strong>
+        <p>$32.00</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#EEE; padding: 4rem 5%;">
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      <div class="card">"Best paper quality I've ever used for my fountain pens."<br><br><strong>- Sarah J.</strong><br><span class="dot-rating">★★★★★</span></div>
+      <div class="card">"The customization process is so simple and fun."<br><br><strong>- Marc K.</strong><br><span class="dot-rating">★★★★★</span></div>
+      <div class="card">"Fast shipping and beautiful packaging. A perfect gift."<br><br><strong>- Elena R.</strong><br><span class="dot-rating">★★★★★</span></div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 style="margin-bottom: 1.5rem;">New Arrivals</h2>
+    <div class="scroll-x">
+      <div class="card"><strong>Dot Grid Blue</strong><p>$22</p></div>
+      <div class="card"><strong>Lined Ochre</strong><p>$22</p></div>
+      <div class="card"><strong>Blank Charcoal</strong><p>$22</p></div>
+      <div class="card"><strong>Grid Sage</strong><p>$22</p></div>
+      <div class="card"><strong>Pocket Red</strong><p>$18</p></div>
+    </div>
+  </section>
+</main><footer>
+  <div style="margin-bottom: 2rem;">
+    <div class="logo" style="color:#FFF; margin-bottom: 1rem;">Mix & Bind</div>
+    <p>Hand-bound quality for modern thinkers.</p>
+  </div>
+  <p>© 2026 Mix & Bind. All rights reserved.</p>
+</footer>
+    
+    <script>
+        function setupFilters() { console.log('Filters initialized'); }
+const dialogs = document.querySelectorAll('dialog');
+dialogs.forEach(d => d.addEventListener('click', e => { if(e.target === d) d.close(); }));
+    </script>
+</body>
+</html>

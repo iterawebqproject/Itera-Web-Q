@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="A curated gateway to Thailand’s contemporary art world.">
+    <title>Galleries &amp; Museums | Thai Gallery Guide</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: 'Trebuchet MS', sans-serif; background-color: #F5FFFA; color: #1a1a1a; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+h1, h2, h3 { font-family: 'Palatino', serif; font-weight: normal; color: #111; }
+header { background: #fff; border-bottom: 1px solid #eee; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+nav a { margin-left: 2rem; text-decoration: none; color: #1a1a1a; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+nav a:hover { color: #FF4F00; }
+nav a[aria-current="page"] { color: #FF4F00; font-weight: bold; border-bottom: 2px solid #FF4F00; }
+main { flex: 1; min-height: 70vh; }
+.hero-slider { position: relative; height: 80vh; overflow: hidden; background: #000; }
+.slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.5s ease-in-out; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+.slide.active { opacity: 1; }
+.slide img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.7); }
+.cta-btn { background-color: #d64200; color: #fff; padding: 1rem 2.5rem; text-decoration: none; display: inline-block; margin-top: 1.5rem; transition: transform 0.3s; }
+.cta-btn:hover { transform: translateY(-3px); }
+.section-padding { padding: 5rem 5%; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card { overflow: hidden; cursor: pointer; }
+.card img { width: 100%; height: auto; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+.card:hover img { transform: scale(1.02); }
+.metadata { padding: 1rem 0; }
+.metadata span { color: #b33700; font-size: 0.8rem; text-transform: uppercase; }
+.bw-portrait { filter: grayscale(100%); transition: filter 0.5s; }
+.bw-portrait:hover { filter: grayscale(0%); }
+footer { background: #111; color: #fff; padding: 3rem 5%; text-align: center; font-size: 0.8rem; letter-spacing: 1px; }
+.map-placeholder { background: #e0e0e0; height: 400px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid #ccc; }
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .hero-slider { height: 60vh; } header { flex-direction: column; padding: 1rem; } nav { margin-top: 1rem; margin-left: 0; } nav a { margin: 0 0.5rem; font-size: 0.8rem; } }
+    </style>
+</head>
+<body>
+    <header><div class="logo"><strong>THAI GALLERY GUIDE</strong></div><nav><a href="index">Home</a><a href="art">Art</a><a href="event">Events</a><a href="artist">Artists</a><a href="gallery-museum" aria-current="page">Museums</a></nav></header><main class="section-padding"><h1>Gallery Directory</h1><div class="grid"><div class="card"><h2>MOCA Bangkok</h2><p>Chatuchak, Bangkok</p><p>Tue-Sun: 10:00 - 18:00</p></div><div class="card"><h2>MAIIAM</h2><p>Sankampaeng, Chiang Mai</p><p>Wed-Mon: 10:00 - 18:00</p></div></div><div class="map-placeholder" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.3267564756!2d100.5513!3d13.8526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDUxJzA5LjQiTiAxMDDCsDMzJzA0LjciRQ!5e0!3m2!1sen!2sth!4v1625123456789" onclick="loadMap(this)"><span>Click to Load Interactive Map</span></div></main><footer><p>THAI GALLERY GUIDE</p><p style="margin: 1rem 0; opacity: 0.6;">The definitive resource for art in the Kingdom of Thailand.</p><p>© 2026 Thai Gallery Guide. All Rights Reserved.</p></footer>
+    
+    <script>
+        let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+function showSlide(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  currentSlide = (n + slides.length) % slides.length;
+  if(slides[currentSlide]) slides[currentSlide].classList.add('active');
+}
+if(slides.length > 0) {
+  setInterval(() => showSlide(currentSlide + 1), 6000);
+}
+function loadMap(el) {
+  const src = el.getAttribute('data-map-src');
+  el.innerHTML = `<iframe src="${src}" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
+}
+    </script>
+</body>
+</html>
