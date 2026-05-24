@@ -1,0 +1,12 @@
+﻿Checklist ID,H04-01
+Heuristic,Consistency and standards
+Severity,Hedonic
+Inspection Principle,Inspection of distinct font families used across the UI.
+Decision Criteria,Pass: The total number of distinct primary font families is 3 or fewer.
+,Fail: More than 3 distinct font families are used.
+Inspection Steps,"1. Collect font families from injected scripts, inline styles, and CSS vars."
+,2. Parse <style> blocks for font-family applied to active selectors.
+,"3. Normalize names exclude system fonts, generic serif/sans-serif, and icons."
+,4. Count unique font families.
+Recommendation,If more than 3 distinct font families are used on the page:
+,"- Consolidate the design to use a maximum of 3 font families (e.g., primary, heading, and accent). Define them globally using CSS variables."

@@ -1,0 +1,10 @@
+﻿Checklist ID,H09-01
+Heuristic,"Help users recognize, diagnose, and recover from errors"
+Severity,Pragmatic
+Inspection Principle,"Inspection of forms for type=""reset"" elements."
+Decision Criteria,Pass: No reset buttons exist on the page.
+,"Fail: An input or button of type=""reset"" is found."
+Inspection Steps,"1. Query for input[type=""reset""] and button[type=""reset""]."
+,2. Flag any detected element.
+Recommendation,"If a reset button (type=""reset"") is found:"
+,- Remove the reset button entirely to prevent users from accidentally clicking it and losing all entered form data.

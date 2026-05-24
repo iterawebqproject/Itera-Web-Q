@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="The pulse of the digital frontier.">
+    <title>AI Content | NeonLogic</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { background-color: #301934; color: #f8f9fa; font-family: system-ui, -apple-system, sans-serif; margin: 0; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.6; } h1, h2, h3, h4 { font-family: 'Trebuchet MS', sans-serif; text-transform: uppercase; letter-spacing: 2px; margin: 0; } a { color: inherit; text-decoration: none; } .layout-wrapper { display: flex; flex: 1; max-width: 1400px; margin: 0 auto; width: 100%; gap: 2rem; padding: 2rem; box-sizing: border-box; } aside { width: 300px; position: sticky; top: 2rem; height: fit-content; border-right: 1px solid #0000FF; padding-right: 2rem; } main { flex: 1; } .badge-neon { border: 1px solid #0000FF; color: #fff; padding: 4px 12px; font-size: 0.75rem; border-radius: 2px; transition: 0.3s; cursor: pointer; display: inline-block; } .badge-neon:hover { filter: drop-shadow(0 0 8px #0000FF); } .btn-neon { background: #0000FF; color: #fff; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; transition: 0.3s; } .btn-neon:hover { filter: drop-shadow(0 0 12px #0000FF); } .jigsaw-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 1rem; } .jigsaw-item { background: #1a0d1c; border: 1px solid #444; position: relative; overflow: hidden; } .jigsaw-item.large { grid-column: span 2; grid-row: span 2; } .score-circle { width: 80px; height: 80px; border: 4px solid #0000FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 1rem 0; } .expandable-row { cursor: pointer; border-bottom: 1px solid #444; } .details { display: none; padding: 1rem; background: #251228; font-size: 0.9rem; } .details.active { display: block; } header { padding: 2rem; border-bottom: 2px solid #0000FF; background: #1a0d1c; } nav ul { display: flex; gap: 2rem; list-style: none; padding: 0; } footer { padding: 3rem; background: #1a0d1c; border-top: 2px solid #0000FF; text-align: center; margin-top: auto; } @media (max-width: 992px) { .layout-wrapper { flex-direction: column; } aside { width: 100%; position: static; border-right: none; border-bottom: 1px solid #0000FF; padding-bottom: 2rem; } .jigsaw-grid { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+    <header><h1>NeonLogic</h1><nav><ul><li><a href="index">Home</a></li><li><a href="tech-category">Tech</a></li><li><a href="ai-category">AI</a></li></ul></nav></header><div class="layout-wrapper"><aside><h3>Expert Take</h3><p>"We are seeing the first signs of true reasoning." - Dr. Aris</p></aside><main><article><h1>The Singularity is Nearer</h1><p style="color:#0000FF;font-weight:bold;">Reading Time: 12 mins</p><div style="font-size:1.2rem;line-height:1.8;background:#000;padding:2rem;border:1px solid #333;"><p>The convergence of quantum computing and transformer architectures has led to a leap in emergent capabilities. We are no longer just predicting the next token; we are simulating logic paths.</p></div><div class="score-circle">A+</div><div style="margin-top:2rem;padding:1rem;border:2px dashed #0000FF;"><h4>Expert Perspective</h4><p>The ethical implications of recursive self-improvement cannot be understated. We need guardrails that are as dynamic as the code itself.</p></div></article></main></div><footer><p>&copy; 2026 NeonLogic. All rights reserved. Built for the future.</p></footer>
+    
+    <script>
+        function toggleDetails(id) { const el = document.getElementById(id); if(el) el.classList.toggle('active'); } document.querySelectorAll('.expandable-row').forEach(row => { row.addEventListener('click', () => { const detailsId = row.getAttribute('data-target'); toggleDetails(detailsId); }); });
+    </script>
+</body>
+</html>

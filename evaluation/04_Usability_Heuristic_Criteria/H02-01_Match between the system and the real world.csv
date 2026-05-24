@@ -1,0 +1,11 @@
+﻿Checklist ID,H02-01
+Heuristic,Match between the system and the real world
+Severity,Pragmatic
+Inspection Principle,Inspection of the lang attribute on the <html> root element.
+Decision Criteria,"Pass: The <html> tag has a valid, non-empty lang attribute."
+,Fail: The lang attribute is missing or empty.
+Inspection Steps,1. Select <html>.
+,2. Read the lang attribute.
+,3. Flag if undefined or an empty string.
+Recommendation,If the lang attribute is missing or empty:
+,"- Add a valid lang attribute to the <html> tag (e.g., lang=""en"") to assist screen readers and search engines."

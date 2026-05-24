@@ -1,0 +1,14 @@
+﻿Checklist ID,H01-03
+Heuristic,Visibility of system status
+Severity,Pragmatic
+Inspection Principle,Inspection of hyperlink styling for distinct color and text-decoration (underline).
+Decision Criteria,Pass: Content links have a distinct color and underline or are exempt interactive blocks/navigation.
+,Fail: Content links lack a distinct color and underline.
+Inspection Steps,"1. Select a[href]. Skip media-only, unstyled, or screen-reader-only links."
+,"2. Determine if the link is an interactive block (button, card, icon) or inside navigation."
+,"3. Check for color styling via inline CSS, stylesheet, class match, or Tailwind classes."
+,4. Check for underline (unless it's an interactive block/nav link).
+Recommendation,If a content link is missing color styling:
+,- Apply a distinct color to the link via CSS to separate it from normal text.
+,If a content link is missing an underline:
+,- Add an underline to content links for accessibility (Note: Buttons and navigation links are exempt from underlines).

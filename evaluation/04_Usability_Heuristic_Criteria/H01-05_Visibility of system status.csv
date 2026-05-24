@@ -1,0 +1,14 @@
+﻿Checklist ID,H01-05
+Heuristic,Visibility of system status
+Severity,Pragmatic
+Inspection Principle,Inspection of navigation elements for a current page indicator.
+Decision Criteria,"Pass: Primary navigation has an active indicator (aria-current, active class) or class divergence."
+,Fail: No active indicator or class divergence exists across multiple links.
+Inspection Steps,"1. Select <nav> or [role=""navigation""]. Flag if none exist."
+,"2. Skip footers or secondary navs (social, pagination)."
+,3. Collect valid <a> links inside the nav.
+,"4. Check for explicit active indicators (.active, aria-current, etc.) or class styling divergence."
+Recommendation,If the page lacks a navigation bar entirely:
+,- Add a navigation element containing links and an active indicator to show the current location.
+,If the navigation bar lacks an active page indicator:
+,"- Add an aria-current=""page"" attribute or an .active CSS class to visually highlight the current page link."

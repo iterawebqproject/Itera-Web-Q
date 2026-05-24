@@ -1,0 +1,11 @@
+﻿Checklist ID,H06-01
+Heuristic,Recognition rather than recall
+Severity,Pragmatic
+Inspection Principle,Inspection of search input locations within the DOM structure.
+Decision Criteria,"Pass: Search fields are in conventional locations (header, nav, aside, modal, or near a heading)."
+,Fail: A search field is placed arbitrarily in the content without surrounding context.
+Inspection Steps,"1. Identify search inputs (type=""search"" or search-related attributes)."
+,"2. Check if placed within <header>, <nav>, <aside>, or a modal/popover."
+,"3. Check if it's the solitary main search, or placed immediately after an h1-h3 heading."
+Recommendation,If a search field is not placed in a conventional location:
+,"- Relocate the search field to a recognizable area such as the header, navigation bar, or immediately following a relevant section heading."

@@ -1,0 +1,21 @@
+﻿Web Name,Source,Total Issues (Heuristic Issues),True Positive,False Positive,False Negative,Precision,Recall
+UrbanConnect,Itera-Web-Q,21,21,0,1,1,0.95
+LearnNova,Itera-Web-Q,7,7,1,0,0.88,1
+Junior Learning,Itera-Web-Q,12,12,4,0,0.75,1
+Mix & Bind,Itera-Web-Q,9,9,0,0,1,1
+Yum Yum Yummy,Itera-Web-Q,14,14,0,0,1,1
+SiamCurrent,Itera-Web-Q,19,19,0,0,1,1
+VitalityGlobal,Itera-Web-Q,19,19,0,0,1,1
+SyncCenter,Itera-Web-Q,18,18,1,0,0.95,1
+CineWave,Itera-Web-Q,15,15,0,0,1,1
+Anya Dev,Itera-Web-Q,11,8,0,3,1,0.73
+UrbanConnect,Lovable,8,8,0,0,1,1
+LearnNova,Lovable,11,10,1,1,0.91,0.91
+Junior Learning,Lovable,6,6,1,0,0.86,1
+Mix & Bind,Lovable,5,5,0,0,1,1
+Yum Yum Yummy,Lovable,6,6,0,0,1,1
+SiamCurrent,Lovable,6,6,0,0,1,1
+VitalityGlobal,Lovable,10,10,0,0,1,1
+SyncCenter,Lovable,6,6,0,0,1,1
+CineWave,Lovable,6,6,0,0,1,1
+Anya Dev,Lovable,10,4,6,6,0.40,0.40

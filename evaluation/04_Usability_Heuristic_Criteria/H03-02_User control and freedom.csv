@@ -1,0 +1,11 @@
+﻿Checklist ID,H03-02
+Heuristic,User control and freedom
+Severity,Essential
+Inspection Principle,"Inspection of dialogs, modals, and popups for a visible close control."
+Decision Criteria,Pass: Every modal/dialog contains a detectable close button.
+,Fail: A modal/dialog exists without any identifiable close button or dismissal action.
+Inspection Steps,"1. Select dialog, [role=""dialog""], .modal, .popup. Skip nested modals."
+,"2. Search for common close controls (e.g., .close-button, data-dismiss)."
+,"3. If no quick match, scan buttons/links for aria-label, title, or text containing ""close"" or ""×""."
+Recommendation,"If a dialog, modal, or popup lacks a visible close button:"
+,"- Add a clearly labeled close button (e.g., an aria-label=""Close"" button) to allow users to easily dismiss the dialog."

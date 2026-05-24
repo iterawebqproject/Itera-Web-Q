@@ -1,0 +1,19 @@
+﻿Checklist ID,H01-04
+Heuristic,Visibility of system status
+Severity,Pragmatic
+Inspection Principle,"Inspection of <title> and <h1> tags for existence, uniqueness, and descriptive content."
+Decision Criteria,Pass: <title> and exactly one <h1> exist and contain non-generic text.
+,"Fail: Missing, empty, or generic <title> or <h1>, or multiple <h1> tags found."
+Inspection Steps,"1. Check if <title> exists, is not empty, and is not a generic term (e.g., ""home"", ""untitled"")."
+,2. Count <h1> elements. Flag if 0 or > 1.
+,3. Check if <h1> text is not empty and not a generic term.
+Recommendation,If the <title> tag is missing or empty:
+,- Add a descriptive <title> tag to help users identify the page in browser tabs.
+,If the <title> text is too generic:
+,"- Change the generic title to a descriptive format (e.g., ""Page Name - Site Name"")."
+,If the page is missing an <h1> tag:
+,- Add exactly one descriptive <h1> tag to indicate the main content of the page.
+,If there are multiple <h1> tags on the page:
+,- Keep only the most important <h1> tag and convert the others to <h2> or appropriate lower heading levels.
+,If the <h1> text is too generic:
+,- Update the <h1> text to clearly and specifically describe the page's actual content.

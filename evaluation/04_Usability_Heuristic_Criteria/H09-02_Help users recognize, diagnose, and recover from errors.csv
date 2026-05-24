@@ -1,0 +1,11 @@
+﻿Checklist ID,H09-02
+Heuristic,"Help users recognize, diagnose, and recover from errors"
+Severity,Essential
+Inspection Principle,Inspection of form error notification mechanisms.
+Decision Criteria,"Pass: A global toast system exists, or forms with novalidate have local error containers."
+,Fail: A novalidate form lacks any detectable local or global error reporting system.
+Inspection Steps,"1. Check for global error systems ([role=""alert""], toast/notification containers)."
+,"2. If none, evaluate each <form novalidate>."
+,"3. Look for error containers inside the form, as siblings, in parents, or via aria-describedby."
+Recommendation,If a form uses novalidate but lacks an error container:
+,"- Add a dedicated error container (e.g., role=""alert"") near the form, or implement a consistent global toast notification system to display validation errors."

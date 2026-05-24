@@ -1,0 +1,11 @@
+﻿Checklist ID,H10-01
+Heuristic,Help and documentation
+Severity,Pragmatic
+Inspection Principle,Inspection of icon-only buttons for accessible labels or tooltips.
+Decision Criteria,Pass: All icon-only interactive elements possess an accessible label/tooltip.
+,"Fail: An icon-only button lacks a title, aria-label, or corresponding tooltip data."
+Inspection Steps,"1. Select button or [role=""button""]. Skip if it has visible text content."
+,"2. Check for title, aria-label, aria-labelledby, aria-describedby, or tooltip data-attributes."
+,"3. Check child SVG/IMG for alt, <title>, or aria-label."
+Recommendation,If an icon-only button is missing a tooltip or aria-label:
+,- Add title and aria-label attributes to provide a descriptive text alternative for screen readers and mouse hover interactions.

@@ -1,0 +1,759 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Verified Information &amp; Policy Transparency"
+    />
+    <title>National Day Rally 2025 | UrbanConnect</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      body > *:not(header):not(nav):not(footer):not(script):not(style) {
+        flex: 1;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background: #dc143c;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: padding 0.3s;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header.shrink {
+        padding: 0.5rem 2rem;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .hero {
+        background: #dc143c;
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .search-bar {
+        max-width: 600px;
+        margin: 2rem auto;
+        display: flex;
+        gap: 10px;
+      }
+      .search-bar input {
+        flex: 1;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+      }
+      .btn-primary {
+        background: #333;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+      }
+      .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .ticker {
+        background: #eee;
+        padding: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-bottom: 2px solid #dc143c;
+      }
+      .ticker-content {
+        display: inline-block;
+        animation: scroll 20s linear infinite;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      .accordion-item {
+        background: white;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .accordion-header {
+        padding: 15px;
+        background: #fff;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+      }
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        padding: 0 15px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .badge-verified {
+        background: #dc143c;
+        color: white;
+      }
+      .badge-clarified {
+        background: #ffccd5;
+        color: #dc143c;
+      }
+      .timeline {
+        border-left: 3px solid #dc143c;
+        margin-left: 20px;
+        padding-left: 20px;
+      }
+      .timeline-item {
+        margin-bottom: 2rem;
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -28px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        background: #dc143c;
+        border-radius: 50%;
+      }
+      footer {
+        background: #333;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        margin-top: auto;
+      }
+      #feedback-trigger {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #dc143c;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        font-size: 24px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      dialog {
+        border: none;
+        border-radius: 8px;
+        padding: 2rem;
+        width: 90%;
+        max-width: 400px;
+      }
+      dialog::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .myth-fact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+      .myth {
+        border-left: 4px solid #ccc;
+        padding: 1rem;
+      }
+      .fact {
+        border-left: 4px solid #dc143c;
+        padding: 1rem;
+      }
+    </style>
+    <style id="pet-style-tag">
+      .petControlPanel {
+        background-color: #f4f4f4;
+        position: absolute;
+        border-radius: 30px;
+        z-index: 2147483699;
+        width: 230px;
+        flex-direction: row;
+        padding: 15px;
+        flex-wrap: wrap;
+        display: flex;
+      }
+
+      .petControlBtn {
+        background-color: #ff6499;
+        width: 45%;
+        height: 36px;
+        border-radius: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        line-height: 36px;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+        margin: 2.5%;
+      }
+
+      .petControlToggleBG {
+        background-color: #d9d9d9;
+        width: 100%;
+        height: 36px;
+        border-radius: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        line-height: 36px;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+        margin: 2.5%;
+        flex-direction: row;
+        display: flex;
+      }
+
+      .petControlToggleSelected {
+        background-color: #ff6499;
+        width: 50%;
+        height: 36px;
+        border-radius: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        line-height: 36px;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+      }
+
+      .petControlToggleUnselected {
+        background-color: #d9d9d9;
+        width: 50%;
+        height: 36px;
+        border-radius: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #666666;
+        line-height: 36px;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+      }
+
+      .petDismissBtn {
+        width: 100%;
+        height: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #666666;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+        margin: 15px 0px;
+      }
+
+      .hideControlBtn {
+        width: 100%;
+        height: 12px;
+        font-size: 12px;
+        color: #666666;
+        text-align: right;
+        font-family: Tahoma;
+        cursor: pointer;
+        margin: 0 2.5%;
+        margin-bottom: 2.5%;
+      }
+
+      .petControlBtn:hover {
+        background-color: #eb3472;
+      }
+
+      .handCursor {
+        cursor:
+          url("https://storage.googleapis.com/office-pets/petHand.png"), auto;
+      }
+
+      .handCursor:active {
+        cursor:
+          url("https://storage.googleapis.com/office-pets/petHandBig.png"), auto;
+      }
+
+      .poopDiv {
+        cursor:
+          url("https://storage.googleapis.com/office-pets/wasteBag.png") 30 15,
+          auto;
+      }
+
+      .petViewportDismiss {
+        position: fixed !important;
+        top: 8px !important;
+        left: 8px !important;
+        margin: 0 !important;
+        z-index: 2147483700 !important;
+        padding: 6px 12px 6px 8px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: Tahoma, sans-serif;
+        color: #333;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-direction: row;
+      }
+
+      .petViewportDismiss:hover {
+        background: #fff;
+        color: #000;
+      }
+
+      .petViewportDismissHead {
+        width: 22px !important;
+        height: 22px !important;
+        max-width: 22px !important;
+        max-height: 22px !important;
+        min-width: 22px !important;
+        min-height: 22px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        display: block !important;
+        box-sizing: border-box !important;
+        border-radius: 4px;
+        align-self: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: middle !important;
+      }
+
+      .petViewportDismissLabel {
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+      }
+
+      .petEatingFood {
+        position: absolute !important;
+        left: 50% !important;
+        top: 152px !important;
+        width: 96px !important;
+        height: 96px !important;
+        margin-left: -98px !important;
+        box-sizing: border-box !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center bottom !important;
+        pointer-events: none !important;
+        z-index: 3000000000 !important;
+        transform: none !important;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand"><strong>UrbanConnect</strong></div>
+      <nav>
+        <a href="index">Home</a><a href="budget-2026">Budget 2026</a
+        ><a href="national-day-rally-2025">Rally 2025</a
+        ><a href="factually-checkpulse">Fact-Check</a
+        ><a href="about-us">About</a>
+      </nav>
+    </header>
+    <main style="flex: 1; padding: 2rem">
+      <h1>National Day Rally 2025</h1>
+      <div style="max-width: 800px; margin: auto">
+        <h2 style="color: #dc143c">Key Takeaways</h2>
+        <p><strong>Housing:</strong> New grants for first-time homeowners.</p>
+        <p>
+          <strong>Economy:</strong> Support for SMEs in the green transition.
+        </p>
+        <div class="timeline">
+          <h3>Announcement Timeline</h3>
+          <div class="timeline-item">
+            <h4>18:00 - Opening Address</h4>
+            <p>Introduction to the theme: "Building Our Future Together".</p>
+          </div>
+          <div class="timeline-item">
+            <h4>19:30 - Social Policy</h4>
+            <p>New initiatives for the aging population.</p>
+          </div>
+        </div>
+        <div
+          style="
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+          "
+        >
+          <h3>Full Transcript</h3>
+          <p id="transcript-text">
+            "Fellow citizens, as we look toward the next decade, our focus
+            remains on resilience and unity..."
+          </p>
+          <button class="btn-primary" onclick="copyTranscript()">
+            Copy to Clipboard
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        © 2026 UrbanConnect - Official Government Portal. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script>
+      window.onscroll = function () {
+        const header = document.querySelector("header");
+        if (window.pageYOffset > 50) {
+          header.classList.add("shrink");
+        } else {
+          header.classList.remove("shrink");
+        }
+      };
+
+      function toggleAccordion(el) {
+        const content = el.nextElementSibling;
+        const isOpen =
+          content.style.maxHeight !== "0px" && content.style.maxHeight !== "";
+        document
+          .querySelectorAll(".accordion-content")
+          .forEach((c) => (c.style.maxHeight = "0px"));
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      }
+
+      function filterFeed() {
+        const input = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        const cards = document.querySelectorAll(".feed-card");
+        cards.forEach((card) => {
+          const text = card.innerText.toLowerCase();
+          card.style.display = text.includes(input) ? "block" : "none";
+        });
+      }
+
+      function copyTranscript() {
+        const text = document.getElementById("transcript-text").innerText;
+        navigator.clipboard
+          .writeText(text)
+          .then(() => alert("Transcript copied to clipboard!"));
+      }
+    </script>
+
+    <div
+      id="happyDogOverlayBg"
+      style="
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999999;
+        backdrop-filter: blur(2px);
+      "
+    >
+      <div
+        id="happyDogOverlayBox"
+        style="
+          background: white;
+          padding: 24px 32px;
+          border-radius: 16px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+          font-size: 18px;
+          max-width: 400px;
+          text-align: center;
+          color: rgb(51, 51, 51);
+          font-family: sans-serif;
+          transition:
+            transform 0.3s,
+            opacity 0.3s;
+          transform: scale(0.95);
+          opacity: 0;
+        "
+      ></div>
+    </div>
+  </body>
+  <div
+    style="
+      position: absolute;
+      left: 330px;
+      top: 20px;
+      display: none;
+      z-index: 2147483647;
+    "
+  >
+    <div
+      class="handCursor"
+      style="
+        height: 240px;
+        width: 200px;
+        background-image: url(&quot;chrome-extension://cdoblkdcnbcdlcfklmbmkapbekgfbijp/images/shadow_gray.png&quot;);
+        background-size: 100% 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        display: none;
+        transform: scale(0.8);
+      "
+    >
+      <div
+        style="
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0px;
+          top: 0px;
+          z-index: 2147483647;
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+          background-position: center center !important;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 85px;
+          left: 34px;
+          height: 120px;
+          width: 120px;
+          background-size: 120px 120px;
+          z-index: 2147483647;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 100px;
+          left: 15px;
+          height: 120px;
+          width: 120px;
+          background-size: 120px 120px;
+          z-index: 2147483647;
+        "
+      ></div>
+      <div
+        class="petEatingFood"
+        aria-hidden="true"
+        style="
+          background-image: url(&quot;chrome-extension://cdoblkdcnbcdlcfklmbmkapbekgfbijp/images/food-default.png&quot;);
+        "
+      ></div>
+      <div
+        style="
+          height: 160px;
+          width: 160px;
+          position: absolute;
+          top: 17px;
+          left: -10px;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          z-index: 2147483647;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            top: -16px;
+            left: 20px;
+            height: 120px;
+            width: 120px;
+            background-size: 120px 120px;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transform: rotate(15deg);
+          "
+        ></div>
+        <div
+          style="
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            height: 120px;
+            width: 120px;
+            background-size: 120px 120px;
+            background-repeat: no-repeat;
+            z-index: 2;
+            transform: rotate(15deg);
+          "
+        ></div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="
+      left: 390px;
+      top: 140px;
+      display: none;
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      background-image: url(&quot;chrome-extension://cdoblkdcnbcdlcfklmbmkapbekgfbijp/images/ball.png&quot;);
+      background-size: 30px 30px;
+      z-index: 20000000;
+    "
+  ></div>
+  <div
+    class="poopDiv"
+    style="
+      left: 450px;
+      top: 150px;
+      display: none;
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      background-image: url(&quot;chrome-extension://cdoblkdcnbcdlcfklmbmkapbekgfbijp/images/poop.png&quot;);
+      background-size: 60px 60px;
+      z-index: 2147483647;
+    "
+  ></div>
+  <div
+    style="
+      left: 410px;
+      top: 230px;
+      width: 150px;
+      text-align: center;
+      display: none;
+      position: absolute;
+      z-index: 2147483647;
+      font-weight: bold;
+      color: rgb(177, 65, 255);
+      font-size: 24px;
+      padding: 4px 8px;
+      border-radius: 10px;
+      pointer-events: none;
+      font-family: Tahoma;
+      text-shadow:
+        white -1px -1px 0px,
+        white 1px -1px 0px,
+        white -1px 1px 0px,
+        white 1px 1px 0px,
+        rgba(0, 0, 0, 0.5) 0px 0px 14px;
+    "
+  >
+    Click to clean up after your pet
+  </div>
+  <div class="petControlPanel" style="display: none">
+    <div class="hideControlBtn">Hide</div>
+    <div class="petControlBtn">Feed</div>
+    <div class="petControlBtn">Treat</div>
+    <div class="petControlBtn">Pet</div>
+    <div class="petControlBtn">Toy</div>
+    <div class="petControlToggleBG">
+      <div class="petControlToggleSelected">Follow</div>
+      <div class="petControlToggleUnselected">Stay</div>
+    </div>
+    <div class="petDismissBtn">Go back home</div>
+  </div>
+  <div
+    style="
+      left: 0px;
+      top: 0px;
+      display: block;
+      position: absolute;
+      z-index: 2147483647;
+      color: rgb(177, 65, 255);
+      font-size: 24px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 10px;
+      pointer-events: none;
+      font-family: Tahoma;
+      text-shadow:
+        white -1px -1px 0px,
+        white 1px -1px 0px,
+        white -1px 1px 0px,
+        white 1px 1px 0px,
+        rgba(0, 0, 0, 0.5) 0px 0px 14px;
+    "
+  ></div>
+  <button type="button" class="petViewportDismiss" aria-label="Dismiss pet">
+    <img
+      class="petViewportDismissHead"
+      alt=""
+      aria-hidden="true"
+      style="
+        width: 22px !important;
+        height: 22px !important;
+        max-width: 22px !important;
+        max-height: 22px !important;
+        min-width: 22px !important;
+        min-height: 22px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+        box-sizing: border-box !important;
+      "
+    /><span class="petViewportDismissLabel">Dismiss</span>
+  </button>
+</html>

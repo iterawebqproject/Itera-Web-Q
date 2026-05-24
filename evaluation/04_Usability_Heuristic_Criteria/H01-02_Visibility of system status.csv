@@ -1,0 +1,18 @@
+﻿Checklist ID,H01-02
+Heuristic,Visibility of system status
+Severity,Essential
+Inspection Principle,"Inspection of <meta http-equiv=""refresh""> tags and delay duration."
+Decision Criteria,"Pass: No meta refresh tag found, or it performs a valid operation without disruption."
+,"Fail: A meta refresh performs an instant redirect, has a delay under 20 seconds, redirects without a manual link, or auto-reloads the page."
+Inspection Steps,"1. Select all meta[http-equiv=""refresh""] tags."
+,2. Parse the content attribute to extract the delay and check for url=.
+,"3. Flag if delay is 0s (instant), < 20s (too short), or >= 20s but missing user control."
+,4. Flag if no URL is present (auto-reloading current page).
+Recommendation,If the redirect is immediate (0 seconds):
+,- Remove the 0-second meta refresh. Use a server-side redirect or provide a button for user-controlled navigation.
+,If the redirect delay is between 1 and 19 seconds:
+,"- Increase the delay to at least 20 seconds (WCAG recommendation) or replace it with a manual ""Continue"" link."
+,If the redirect delay is >= 20 seconds but lacks a manual link:
+,"- Provide a manual ""Continue"" link alongside the timed redirect to give users full control."
+,If the tag auto-reloads the current page (no URL):
+,"- Remove the auto-refresh meta tag. Use AJAX for updates or provide a manual ""Refresh"" button to prevent disrupting screen readers."

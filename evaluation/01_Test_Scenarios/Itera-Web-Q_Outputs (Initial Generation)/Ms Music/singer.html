@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="The Pulse of Sound and Culture">
+    <title>Artists | Ms Music</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background-color: #E5E4E2; color: #1a1a1a; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; } header { position: sticky; top: 0; z-index: 1000; background: rgba(229, 228, 226, 0.8); backdrop-filter: blur(10px); border-bottom: 2px solid #000; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; } .logo { font-weight: 900; font-size: 1.8rem; text-transform: uppercase; letter-spacing: -1px; color: #000; text-decoration: none; } nav a { margin-left: 20px; text-decoration: none; color: #000; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; } nav a:hover { color: #DF00FF; } main { flex: 1; } section { padding: 4rem 5%; } .hero { background: #000; color: #fff; padding: 6rem 5%; position: relative; overflow: hidden; } .hero h1 { font-size: clamp(3rem, 10vw, 6rem); line-height: 0.9; text-transform: uppercase; margin: 0; } .badge { background: #DF00FF; color: #fff; padding: 4px 12px; font-weight: 900; display: inline-block; margin-bottom: 1rem; } .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; } .card { position: relative; overflow: hidden; background: #fff; border: 1px solid #000; } .card img { width: 100%; height: 400px; object-fit: cover; filter: grayscale(100%); transition: transform 0.5s ease, filter 0.5s ease; } .card:hover img { transform: scale(1.05); filter: grayscale(0%); } .card-content { padding: 1.5rem; } .score-badge { position: absolute; top: 10px; right: 10px; background: #000; color: #DF00FF; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.2rem; border: 2px solid #DF00FF; } .slanted-section { background: #DF00FF; color: #fff; transform: skewY(-2deg); padding: 6rem 5%; margin: 4rem 0; } .slanted-content { transform: skewY(2deg); } .social-hub { position: fixed; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 999; } .social-hub a { background: #000; color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s; } .social-hub a:hover { transform: scale(1.2); background: #DF00FF; } footer { background: #000; color: #fff; padding: 3rem 5%; text-align: center; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; } .btn { display: inline-block; padding: 1rem 2rem; background: #000; color: #fff; text-decoration: none; font-weight: 900; text-transform: uppercase; border: none; cursor: pointer; } .btn-primary { background: #DF00FF; }
+    </style>
+</head>
+<body>
+    <header><a href="index" class="logo">Ms Music</a><nav><a href="index">Home</a><a href="music">Music</a><a href="singer">Artists</a><a href="about-us">About</a></nav></header><main><section><h1>Artist A-Z</h1><div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:3rem;"><span style="font-weight:900; font-size:1.5rem; cursor:pointer;">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span></div></section><section><h2>Featured Artist of the Month</h2><div class="card" style="display:flex; flex-direction:row; align-items:center;"><img src="assets/generated-8d3ea06d5bb0.webp" style="width:50%; height:600px;" alt="Featured Artist" decoding="async" width="640" height="480" loading="eager" fetchpriority="high"><div style="padding:4rem;"><span class="badge">COVER STORY</span><h2>ELARA VANCE</h2><p>The voice defining a generation of dreamers.</p><a href="singer-profile" class="btn">Read Profile</a></div></div></section></main><footer><p>&copy; 2026 MS MUSIC MAGAZINE. ALL RIGHTS RESERVED.</p></footer>
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); });
+    </script>
+</body>
+</html>

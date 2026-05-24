@@ -1,0 +1,14 @@
+﻿Checklist ID,H07-01
+Heuristic,Flexibility and efficiency of use
+Severity,Pragmatic
+Inspection Principle,Inspection of viewport meta tags and CSS media queries.
+Decision Criteria,Pass: Viewport tag exists with width=device-width and media queries are present.
+,"Fail: Missing/invalid viewport tag, or total absence of media queries/external CSS."
+Inspection Steps,"1. Check <meta name=""viewport""> for width=device-width."
+,"2. Check raw HTML for @media rules or linked external <link rel=""stylesheet"">."
+Recommendation,If the viewport meta tag is missing:
+,"- Add a viewport meta tag (<meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">) to the <head> section."
+,If the viewport meta tag is missing width=device-width:
+,- Update the existing viewport tag to include width=device-width to ensure proper scaling on mobile devices.
+,If no media queries are detected:
+,- Implement responsive design using CSS @media queries to ensure the layout adapts to various screen sizes.

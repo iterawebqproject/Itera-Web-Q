@@ -1,0 +1,16 @@
+﻿Checklist ID,H04-02
+Heuristic,Consistency and standards
+Severity,Hedonic
+Inspection Principle,"Cross-page analysis of structural tags (<nav>, <aside>, <footer>)."
+Decision Criteria,Pass: Navigation structures (<nav> vs <aside>) are consistent across all evaluated pages.
+,"Fail: Mixed usage of <nav> and <aside>, or inconsistent presence across pages."
+Inspection Steps,"1. Record the presence of <nav>, <aside>, and <footer> per page."
+,2. Run cross-page consistency check.
+,3. Flag if some pages use <nav> while others use <aside> exclusively.
+,4. Flag if a structural element is present on some pages but completely missing on others.
+Recommendation,If mixed navigation elements are detected across pages:
+,- Standardize the layout by consistently using either <nav> or <aside> across all pages in the system.
+,If <nav> is present on some pages but absent on others:
+,- Ensure the navigation bar is consistently present on all applicable pages.
+,If <aside> is present on some pages but absent on others:
+,- Ensure the sidebar structure is consistently applied across all applicable pages.

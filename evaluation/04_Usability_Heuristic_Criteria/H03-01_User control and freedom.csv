@@ -1,0 +1,18 @@
+﻿Checklist ID,H03-01
+Heuristic,User control and freedom
+Severity,Essential
+Inspection Principle,Inspection of controls attributes on <video> and <audio> elements.
+Decision Criteria,Pass: Non-decorative media elements have the controls attribute.
+,Fail: Media elements lack controls (and especially if autoplay is active).
+Inspection Steps,1. Select <video> and <audio> elements.
+,2. Skip decorative background videos (autoplay + muted + loop) or aria-hidden media.
+,3. Check for the controls attribute. Flag if missing.
+,4. Escalate issue if autoplay is present without controls.
+Recommendation,If a <video> lacks the controls attribute:
+,"- Add the controls attribute to enable native play, pause, and volume options."
+,If a <video> uses autoplay without controls:
+,"- Add the controls attribute immediately, as autoplay media without controls prevents users from stopping it."
+,If an <audio> lacks the controls attribute:
+,- Add the controls attribute to allow users to manage audio playback.
+,If an <audio> uses autoplay without controls:
+,- Add the controls attribute so users are not forced to listen to audio they cannot stop.

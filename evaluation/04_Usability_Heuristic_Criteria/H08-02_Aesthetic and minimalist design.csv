@@ -1,0 +1,11 @@
+﻿Checklist ID,H08-02
+Heuristic,Aesthetic and minimalist design
+Severity,Hedonic
+Inspection Principle,"Inspection and normalization of all UI colors (CSS, inline, JS, Tailwind) to calculate palette size."
+Decision Criteria,Pass: 4 or fewer distinct color groups are detected.
+,Fail: More than 4 distinct color groups are used on the page.
+Inspection Steps,"1. Extract colors from CSS blocks, inline styles, script DOM manipulations, and Tailwind classes."
+,"2. Normalize to hex values. Convert all grayscale/desaturated colors into a single ""grayscale-group""."
+,"3. Exclude semantic system variables (success, error, warning). Count unique groups."
+Recommendation,If more than 4 distinct color groups are detected:
+,- Consolidate the color palette to use a maximum of 4 distinct accent/brand colors. Note that all grayscale shades are evaluated as a single group.

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Create a journal that is perfect for you.">
+    <title>Paper Textures | Mix &amp; Bind</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; font-family: 'Helvetica', Arial, sans-serif; background-color: #F5F5F5; color: #333; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.5; }
+header { background: #FFF; border-bottom: 2px solid #EEE; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; transition: color 0.2s; }
+nav a:hover { color: #FF8000; }
+.logo { font-size: 1.5rem; font-weight: 900; color: #FF8000; text-transform: uppercase; letter-spacing: -1px; }
+footer { background: #333; color: #FFF; padding: 3rem 5%; text-align: center; font-size: 0.8rem; }
+.btn { display: inline-block; padding: 1rem 2rem; background: #FF8000; color: #FFF; text-decoration: none; font-weight: bold; border-radius: 4px; border: none; cursor: pointer; transition: transform 0.2s; }
+.btn:hover { transform: translateY(-2px); }
+.grid { display: grid; gap: 2rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+.hero-tangerine { background: #FF8000; color: #FFF; padding: 6rem 5%; text-align: center; background-image: radial-gradient(#ff9933 1px, transparent 1px); background-size: 20px 20px; }
+.hero-tangerine h1 { font-size: 4rem; margin: 0; text-transform: uppercase; line-height: 0.9; }
+.card { background: #FFF; padding: 2rem; border: 1px solid #EEE; transition: border-color 0.3s; }
+.card:hover { border-color: #FF8000; }
+.ghost-card { border: 1px solid #DDD; background: #FFF; padding: 1rem; position: relative; }
+.sidebar-layout { display: flex; gap: 3rem; }
+.sidebar { width: 250px; flex-shrink: 0; }
+.main-content { flex: 1; }
+.pattern-dot { background-image: radial-gradient(#CCC 1px, transparent 1px); background-size: 10px 10px; height: 150px; border: 1px solid #EEE; }
+.pattern-line { background: repeating-linear-gradient(0deg, #EEE, #EEE 1px, #FFF 1px, #FFF 20px); height: 150px; border: 1px solid #EEE; }
+.pattern-grid { background-image: linear-gradient(#EEE 1px, transparent 1px), linear-gradient(90deg, #EEE 1px, transparent 1px); background-size: 20px 20px; height: 150px; border: 1px solid #EEE; }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.matrix-table td, .matrix-table th { padding: 1rem; border-bottom: 1px solid #EEE; text-align: left; }
+.dot-rating { color: #FF8000; }
+.scroll-x { display: flex; overflow-x: auto; gap: 1.5rem; padding-bottom: 1rem; }
+.scroll-x .card { min-width: 250px; flex-shrink: 0; }
+@media (max-width: 768px) { .sidebar-layout { flex-direction: column; } .hero-tangerine h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <header>
+  <div class="logo">Mix & Bind</div>
+  <nav>
+    <a href="index">Home</a>
+    <a href="books">Books</a>
+    <a href="paper-textures">Paper</a>
+    <a href="how-to-diy">How-To</a>
+    <a href="about-us">About</a>
+  </nav>
+</header><main class="container">
+  <h1>Paper Styles</h1>
+  <div class="grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 4rem;">
+    <div>
+      <div class="pattern-dot"></div>
+      <h4 style="margin-top:1rem;">Dot Grid</h4>
+      <p>Perfect for bullet journaling.</p>
+    </div>
+    <div>
+      <div class="pattern-line"></div>
+      <h4 style="margin-top:1rem;">College Ruled</h4>
+      <p>Classic for long-form writing.</p>
+    </div>
+    <div>
+      <div class="pattern-grid"></div>
+      <h4 style="margin-top:1rem;">Graph Paper</h4>
+      <p>Ideal for sketches and math.</p>
+    </div>
+  </div>
+
+  <table class="matrix-table">
+    <thead>
+      <tr><th>Style</th><th>Ink Absorption</th><th>Smoothness</th><th>Weight</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dot Grid</td><td><span class="dot-rating">●●●●○</span></td><td><span class="dot-rating">●●●●●</span></td><td>100gsm</td></tr>
+      <tr><td>Lined</td><td><span class="dot-rating">●●●○○</span></td><td><span class="dot-rating">●●●●○</span></td><td>90gsm</td></tr>
+      <tr><td>Blank</td><td><span class="dot-rating">●●●●●</span></td><td><span class="dot-rating">●●●○○</span></td><td>120gsm</td></tr>
+    </tbody>
+  </table>
+
+  <div style="background:#FF8000; color:#FFF; padding: 4rem; text-align:center; margin-top: 4rem;">
+    <h2>Not sure which to pick?</h2>
+    <p style="margin-bottom: 2rem;">Order our sample pack to feel the difference yourself.</p>
+    <a href="#" class="btn" style="background:#000;">Get Sample Pack</a>
+  </div>
+</main><footer>
+  <div style="margin-bottom: 2rem;">
+    <div class="logo" style="color:#FFF; margin-bottom: 1rem;">Mix & Bind</div>
+    <p>Hand-bound quality for modern thinkers.</p>
+  </div>
+  <p>© 2026 Mix & Bind. All rights reserved.</p>
+</footer>
+    
+    <script>
+        function setupFilters() { console.log('Filters initialized'); }
+const dialogs = document.querySelectorAll('dialog');
+dialogs.forEach(d => d.addEventListener('click', e => { if(e.target === d) d.close(); }));
+    </script>
+</body>
+</html>

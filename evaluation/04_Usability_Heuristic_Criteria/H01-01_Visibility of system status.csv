@@ -1,0 +1,16 @@
+﻿Checklist ID,H01-01
+Heuristic,Visibility of system status
+Severity,Pragmatic
+Inspection Principle,Inspection of required attributes and hidden status via aria-hidden or CSS.
+Decision Criteria,"Pass: No required fields are hidden without visual cues, or they belong to custom UI components."
+,Fail: Required fields are hidden (aria/CSS) or lack visual required indicators.
+Inspection Steps,"1. Select input, textarea, select with the required attribute (ignore type=""hidden"")."
+,"2. Check if hidden by aria-hidden=""true"" or CSS (display:none / visibility:hidden)."
+,"3. Check for * or required text in <label>, aria-label, aria-labelledby, placeholder, or class."
+,"4. Exempt custom UI widgets (e.g., tabindex=""-1"", role=""combobox"", role=""switch"")."
+Recommendation,If hidden by aria-hidden:
+,"- The required field must be made visible and accessible by removing aria-hidden=""true""."
+,If hidden by CSS:
+,- The required field must be made visible by removing display: none or visibility: hidden.
+,If visible but lacks a required indicator:
+,- Add a * or (required) indicator to the field’s <label> to clearly mark it.

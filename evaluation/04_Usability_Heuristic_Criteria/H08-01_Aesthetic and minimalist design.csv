@@ -1,0 +1,11 @@
+﻿Checklist ID,H08-01
+Heuristic,Aesthetic and minimalist design
+Severity,Hedonic
+Inspection Principle,Inspection of CSS animations and motion transitions for reduced-motion alternatives.
+Decision Criteria,Pass: No motion CSS is found or prefers-reduced-motion support is implemented.
+,Fail: Motion effects (animations/transforms) exist without a reduced-motion fallback.
+Inspection Steps,1. Extract CSS rules and inline styles. Detect animation properties.
+,"2. Detect transition properties specifically acting on motion/layout (transform, translate, width, etc.)."
+,3. Check HTML for @media (prefers-reduced-motion) or Tailwind motion-reduce.
+Recommendation,If animations or motion transitions lack a prefers-reduced-motion fallback:
+,- Implement @media (prefers-reduced-motion: reduce) to disable or minimize animations for users with motion sensitivity settings enabled.

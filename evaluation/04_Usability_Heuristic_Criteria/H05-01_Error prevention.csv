@@ -1,0 +1,17 @@
+﻿Checklist ID,H05-01
+Heuristic,Error prevention
+Severity,Essential
+Inspection Principle,Inspection of username and password fields for specific format helper text.
+Decision Criteria,Pass: Registration/signup credentials have explicit formatting instructions.
+,Fail: Password/username fields lack helper text or have vague instructions.
+Inspection Steps,"1. Select type=""password"" and username fields. Skip login forms or current-password fields."
+,"2. Look for helper text via aria-describedby, siblings, or title."
+,"3. If text exists, check for specific criteria keywords (e.g., ""length"", ""number"", ""character"")."
+Recommendation,If a password field lacks any instructions:
+,- Add helper text using aria-describedby to explain the required password format before the user submits.
+,"If a password field has helper text, but it lacks specific criteria:"
+,"- Update the helper text to explicitly state the minimum length and required character types (e.g., numbers, symbols)."
+,If a username field lacks any instructions:
+,- Add helper text using aria-describedby to explain the allowed username format.
+,"If a username field has helper text, but lacks format constraints:"
+,"- Update the helper text to explicitly state length constraints and allowed characters (e.g., alphanumeric only)."

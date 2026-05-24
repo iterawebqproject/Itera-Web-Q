@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="A beautiful and easy-to-use guide to everything matcha.">
+    <title>History of Matcha | Matcha Heritage</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        :root { --primary: #1B3022; --secondary: #8BA346; --bg: #FDFCF0; --white: #ffffff; --text: #2d2d2d; --font-serif: 'Merriweather', serif; --font-sans: 'Montserrat', sans-serif; } * { box-sizing: border-box; margin: 0; padding: 0; } body { background-color: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; } h1, h2, h3 { font-family: var(--font-serif); color: var(--primary); } a { text-decoration: none; color: inherit; transition: 0.3s; } header { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; } nav a { margin-left: 1.5rem; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; } nav a:hover { color: var(--secondary); } main { flex: 1; } .hero { position: relative; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; overflow: hidden; } .hero img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.7); } .btn { background: var(--secondary); color: white; padding: 1rem 2rem; border-radius: 2px; display: inline-block; font-weight: bold; border: none; cursor: pointer; } .section-padding { padding: 5rem 10%; } .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; } .recipe-card { background: var(--white); border-radius: 4px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; } .recipe-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); } .badge { position: absolute; top: 1rem; right: 1rem; background: var(--primary); color: white; padding: 0.2rem 0.8rem; font-size: 0.7rem; text-transform: uppercase; } footer { background: #f4f2e6; padding: 3rem 10%; text-align: center; border-top: 1px solid #e0decb; } .newsletter-bar { max-width: 600px; margin: 2rem auto; display: flex; gap: 0.5rem; } .newsletter-bar input { flex: 1; padding: 0.8rem; border: 1px solid #ccc; } @media print { header, footer, .no-print { display: none !important; } main { width: 100%; } }
+    </style>
+</head>
+<body>
+    <header><div class="logo"><strong>MATCHA HERITAGE</strong></div><nav><a href="index">Home</a><a href="history-of-matcha">History</a><a href="origin-regions-japan">Regions</a><a href="matcha-types-and-aroma">Types</a><a href="brewing-methods">Brewing</a><a href="recipes-index">Recipes</a></nav></header><main><section class="section-padding"><h1 style="text-align:center; margin-bottom:4rem;">The Timeline of Tea</h1><div style="max-width:800px; margin:0 auto; border-left: 2px solid var(--secondary); padding-left: 2rem;"><div style="margin-bottom:3rem;"><h3>1191: The Arrival</h3><p>The monk Eisai brings tea seeds from China to Kyoto, marking the beginning of Zen tea culture.</p></div><div style="margin-bottom:3rem;"><h3>1500s: The Tea Ceremony</h3><p>Sen no Rikyu formalizes the Way of Tea (Chado), emphasizing harmony, respect, and purity.</p></div><div style="margin-bottom:3rem;"><h3>Modern Era</h3><p>Matcha evolves from a ritualistic drink to a global superfood celebrated for its health benefits.</p></div></div></section></main><footer><div class="newsletter-bar"><h3>Join the Heritage</h3><div style="display:flex; width:100%; margin-top:1rem;"><input type="email" placeholder="Enter your email"><button class="btn">Subscribe</button></div></div><p>&copy; 2026 Matcha Heritage. All rights reserved.</p></footer>
+    
+    <script>
+        function scrollToRegion(id) { const el = document.getElementById(id); if(el) el.scrollIntoView({ behavior: 'smooth' }); } function printRecipe() { window.print(); }
+    </script>
+</body>
+</html>

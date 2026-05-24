@@ -1,0 +1,12 @@
+﻿Checklist ID,H05-02
+Heuristic,Error prevention
+Severity,Pragmatic
+Inspection Principle,"Inspection of generic type=""text"" inputs for semantic HTML5 input types."
+Decision Criteria,"Pass: Inputs meant for email, phone, date, or numbers use the correct semantic type."
+,"Fail: type=""text"" is used for fields identified as email, phone, date, or numbers."
+Inspection Steps,"1. Select input[type=""text""]."
+,"2. Analyze name, id, and placeholder for semantic keywords (email, tel, phone, date, age, qty)."
+,3. Skip if custom datepickers or numeric inputmode attributes are in use.
+,4. Suggest replacing generic text with the appropriate HTML5 type.
+Recommendation,"If a type=""text"" field should use a semantic type:"
+,"- Replace type=""text"" with the appropriate HTML5 semantic type (e.g., email, tel, date, or number) to enable browser-level validation and optimized mobile keyboards."

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="High-tech solutions and career opportunities for the future.">
+    <title>Products | ATech Solutions</title>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+        body > *:not(header):not(nav):not(footer):not(script):not(style) { flex: 1; }
+        img { max-width: 100%; height: auto; }
+        
+        body { margin: 0; padding: 0; font-family: 'Tahoma', sans-serif; background-color: #DBD7D2; color: #333; display: flex; flex-direction: column; min-height: 100vh; } main { flex: 1; } header { background: #fff; border-bottom: 1px solid #ccc; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; } nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; } nav a:hover, nav a.active { color: #FE0000; } .hero { background: #FE0000; color: #fff; padding: 100px 5%; text-align: center; } .hero h1 { font-size: 4rem; margin: 0; text-transform: uppercase; } .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem 5%; } .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; padding: 4rem 5%; } .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 4rem 5%; } .section-title { text-align: center; margin-bottom: 2rem; font-size: 2rem; } .btn-red { background: #FE0000; color: #fff; padding: 12px 24px; text-decoration: none; display: inline-block; border: none; cursor: pointer; font-weight: bold; } .dust-grey { background: #c7c3be; padding: 4rem 5%; } .logo-cloud { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; opacity: 0.7; } .logo-cloud svg { height: 40px; width: auto; } .timeline { border-left: 2px solid #FE0000; margin: 2rem 0; padding-left: 2rem; position: relative; } .timeline-item { margin-bottom: 2rem; position: relative; } .timeline-item::before { content: ''; position: absolute; left: -2.4rem; top: 0.5rem; width: 12px; height: 12px; background: #FE0000; border-radius: 50%; } .portrait { filter: grayscale(100%); transition: filter 0.3s ease; width: 100%; height: auto; } .portrait:hover { filter: grayscale(0%); } .faq-item { border-bottom: 1px solid #ccc; padding: 1rem 0; cursor: pointer; } .faq-answer { display: none; padding-top: 1rem; color: #555; } .faq-item.active .faq-answer { display: block; } footer { background: #222; color: #fff; padding: 2rem 5%; text-align: center; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <header><div class="brand"><strong>ATECH</strong> SOLUTIONS</div><nav><a href="index">Home</a><a href="product-page" class="active">Products</a><a href="our-company">Company</a><a href="leadership-board">Leadership</a><a href="product-faq">FAQ</a></nav></header><main><div style="padding: 2rem 5%; border-bottom: 1px solid #ccc;"><span style="margin-right:20px; border-bottom: 2px solid #FE0000; padding-bottom: 5px;">All</span><span style="margin-right:20px;">Hardware</span><span style="margin-right:20px;">Software</span></div><section class="grid-2"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><rect width='100%' height='100%' fill='%23f1f5f9'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-size='32' font-family='system-ui'>Image Loading...</text></svg>" alt="Tech 1" decoding="async" width="640" height="480" loading="eager" fetchpriority="high"><img src="assets/generated-51452b00e6e0.webp" alt="Tech 2" decoding="async" width="640" height="480" loading="lazy" fetchpriority="low"></section><section class="dust-grey" style="text-align:center;"><h2>Experience the Future</h2><button class="btn-red">Request a Demo</button></section></main><footer><p>© 2026 ATech Solutions. All rights reserved.</p></footer>
+    
+    <script>
+        function toggleFaq(el) { el.classList.toggle('active'); } function showBio(id) { document.querySelectorAll('.bio-content').forEach(b => b.style.display = 'none'); document.getElementById(id).style.display = 'flex'; }
+    </script>
+</body>
+</html>
