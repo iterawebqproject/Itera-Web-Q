@@ -59,9 +59,6 @@ In the project directory, you can run:
 ## Project Structure
 
 ```
-## Project Structure
-
-```text
 / (Root Directory)
 ├── /design                                     
 │   ├── /01-prompts                             
@@ -101,6 +98,20 @@ In the project directory, you can run:
    └── next.config.ts          # Next.js configuration   
 
 ```
+
+### 🧠 Domain 1: Design (Prompts & Criteria)
+The `/design` directory serves as the conceptual blueprint of the system. 
+- **01-prompts**: Houses the highly structured system and user prompts engineered for Gemini 3 Flash to ensure stable UI generation and effective code refinement.
+- **Criteria (02-05)**: Contains the exact configuration and threshold definitions for the four automated audit tools (Lighthouse, Pa11y, Usability Heuristics, and Green Software) utilized within the Quality Feedback Loop.
+
+### 📊 Domain 2: Evaluation (Testing & Results)
+The `/evaluation` directory contains the empirical data backing the research.
+- **01-test-scenarios**: Includes the 30 specific web generation scenarios used to validate the system's capabilities.
+- **02-evaluation-results**: Stores the raw output metrics and statistical analysis comparing the baseline generation against the iteratively refined code.
+
+### 💻 Domain 3: Core System
+The `/itera-web-q-system` contains the Next.js application that brings the automated Quality Feedback Loop to life, integrating the LLM generation with the four assessment tools via robust API routes.
+
 
 ## Environment
 
