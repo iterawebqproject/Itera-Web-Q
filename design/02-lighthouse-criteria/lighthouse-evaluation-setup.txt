@@ -1,0 +1,102 @@
+LIGHTHOUSE EVALUATION SETUP
+
+1. Configuration Setup
+
+Lighthouse Options
+* Version: 13.0.3
+* Emulation Strategy: Desktop (--emulated-form-factor=desktop)
+* Throttling: Default Desktop (No custom network throttling applied)
+* Evaluated Categories: Performance, Accessibility, Best Practices, and SEO
+
+Browser & Viewport Config (Desktop Simulation)
+* Dimensions: 1350px width x 940px height (Device Scale Factor = 1)
+* Device Context: Desktop Simulation
+* Chrome Flags: Headless mode, --no-sandbox
+
+2. Evaluation Criteria
+
+The system uses Google Lighthouse to audit web quality across four primary categories. Each category generates a score from 0 to 100 based on standard web metrics:
+* Performance: Measures page load speed and user responsiveness (e.g., First Contentful Paint, Largest Contentful Paint).
+* Accessibility: Evaluates the site's accessibility for all user demographics (serving as a complementary assessment to Pa11y).
+* Best Practices: Audits modern web development standards and baseline security (e.g., HTTPS, image aspect ratios).
+* SEO: Assesses readiness for search engine rankings (e.g., meta tags, tap targets).
+
+3. Experimental Environment & Methodology
+
+All automated evaluations were executed completely in a controlled local environment to eliminate network latency variations from serverless platforms.  
+
+Hardware & OS Specifications
+* Machine: Apple Mac running on an Apple M3 chip
+* Memory: 8 GB Unified Memory
+* Operating System: macOS Sequoia 15.7.3  
+
+Software & Browser Specifications  
+* Browser Engine: Google Chrome (version 147.0)
+* Execution Mode: Automated Headless mode (--no-sandbox)
+* Evaluation Period: April 7 - 11, 2026
+
+Testing Methodology  
+* Execution Flow: Automated sequential loop across all targeted web pages.  
+* Test Frequency: 1 execution run per page to ensure a single-pass assessment baseline.
+
+
+4. Example Output
+
+Below is an excerpt of the raw JSON output generated from the evaluation, illustrating how individual audit details, performance metrics, and scoring data are structured:
+
+{
+  "lighthouseVersion": "13.0.3",
+  "requestedUrl": "https://web-ai-quality-itrwq-devjourney-portfolio-6a8e47.pages.dev/",
+  ...
+  },
+  "audits": {
+    "is-on-https": {
+      "id": "is-on-https",
+      "title": "Uses HTTPS",
+      "description": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "Insecure URL"
+          },
+          {
+            "key": "resolution",
+            "valueType": "text",
+            "label": "Request Resolution"
+          }
+        ],
+        "items": []
+      }
+    },
+    "redirects-http": {
+      "id": "redirects-http",
+      "title": "Redirects HTTP traffic to HTTPS",
+      "description": "Make sure that you redirect all HTTP traffic to HTTPS in order to enable secure web features for all your users. [Learn more](https://developer.chrome.com/docs/lighthouse/pwa/redirects-http/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "first-contentful-paint": {
+      "id": "first-contentful-paint",
+      "title": "First Contentful Paint",
+      "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "numericValue": 861.4825,
+      "numericUnit": "millisecond",
+      "displayValue": "0.9 s",
+      "scoringOptions": {
+        "p10": 1800,
+        "median": 3000
+      }
+    },
+  }
+}
+
+5. References
+* Official Document: https://developer.chrome.com/docs/lighthouse/
+* Lighthouse GitHub Repository: https://github.com/GoogleChrome/lighthouse

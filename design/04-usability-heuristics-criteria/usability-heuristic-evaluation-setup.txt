@@ -1,0 +1,88 @@
+USABILITY HEURISTIC EVALUATION SETUP & CRITERIA
+
+1. Configuration Setup
+
+Usability Heuristic Options
+* Evaluation Type: Automated Static Code Analysis
+* Total Rule Checklist: 19 Automated Points
+* Rule File Metadata: Category, Severity, Inspection Principle, Decision Criteria, Inspection Steps, Recommendation
+
+Browser & Viewport Config (Desktop Simulation)
+* Dimensions: 1350px width x 940px height
+* Device Context: isMobile: false, hasTouch: false
+* Chrome Flags: Headless mode, --no-sandbox, --disable-dev-shm-usage
+
+
+2. Evaluation Criteria
+
+The system executes automated static code analysis to audit web frontend code against a 19-point heuristic checklist derived from Nielsen's 10 Usability Heuristics.
+
+Heuristic Mapping & Inspection Principles
+* H01: Visibility of system status (5 rules) - Inspects for required fields cues, redirection delays, hyperlink styling, unique page titles/headers, and active navigation indicators.
+* H02: Match between the system and the real world (1 rule) - Inspects the `lang` attribute on the root element.
+* H03: User control and freedom (2 rules) - Inspects media controls and clear exit/close buttons on modals.
+* H04: Consistency and standards (2 rules) - Inspects for maximum font-family usage and consistent structural tags (<nav>, <aside>, <footer>) across pages.
+* H05: Error prevention (2 rules) - Inspects helper text for credentials and proper semantic HTML5 input types.
+* H06: Recognition rather than recall (1 rule) - Inspects the placement of search fields in conventional locations.
+* H07: Flexibility and efficiency of use (1 rule) - Inspects responsive design via viewport meta tags and media queries.
+* H08: Aesthetic and minimalist design (2 rules) - Inspects reduced-motion fallbacks for animations and limits maximum color palettes.
+* H09: Help users recognize, diagnose, and recover from errors (2 rules) - Inspects the avoidance of reset buttons and the presence of error notification systems.
+* H10: Help and documentation (1 rule) - Inspects icon-only buttons for accessible labels or tooltips.
+
+Issue Classifications & Severity
+* Essential: Critical usability issues that completely block core tasks or trap users in unintended states (e.g., instant redirects, missing media controls, lack of error notifications).
+* Pragmatic: Task-oriented and functional usability issues that hinder user operations, efficiency, or layout navigation (e.g., missing responsive design, generic page titles, improper semantic inputs).
+* Hedonic: Experiential, psychological, or aesthetic design elements that affect user comfort, emotion, and inclusion (e.g., missing prefers-reduced-motion queries, inconsistent fonts, excessive color usage).
+
+
+3. Experimental Environment & Methodology
+
+All automated evaluations were executed completely in a controlled local environment to eliminate network latency variations from serverless platforms.
+
+Hardware & OS Specifications
+* Machine: Apple Mac running on an Apple M3 chip
+* Memory: 8 GB Unified Memory
+* Operating System: macOS Sequoia 15.7.3
+
+Testing Methodology
+* Evaluation Period: April 7 - 11, 2026
+
+
+4. Example Output
+
+Below is a sample JSON output generated from the evaluation, illustrating how specific heuristic issues (pragmatic and hedonic) are structured and reported:
+
+[
+  {
+        "checklistId": "H01-05",
+        "checklistItem": "Navigation bar lacks current page indicator (e.g. aria-current, .active, .current class)",
+        "heuristic": "Visibility of system status",
+        "severity": "pragmatic",
+        "recommendation": "The navigation menu in the header section, in the navigation menu lacks an active page indicator. Add aria-current=\"page\" attribute to the current page link. Example: <a href=\"/about\" aria-current=\"page\">About</a> or add class=\"active\" with CSS styling to highlight it.",
+        "affectedSelectors": "body > header > nav",
+        "fileName": "index.html"
+    },
+    {
+        "checklistId": "H07-01",
+        "checklistItem": "Page is not responsive: missing viewport meta tag or CSS media queries",
+        "heuristic": "Flexibility and efficiency of use",
+        "severity": "pragmatic",
+        "recommendation": "Responsive design issues detected (1 issue):\n1. No media queries detected - add responsive CSS with media queries. Example: @media (max-width: 768px) { /* mobile styles */ }",
+        "affectedSelectors": "html > head > style",
+        "fileName": "index.html"
+    },
+    {
+        "checklistId": "H08-01",
+        "checklistItem": "Page uses CSS animations or fast-moving transitions without a prefers-reduced-motion media query or utility",
+        "heuristic": "Aesthetic and minimalist design",
+        "severity": "hedonic",
+        "recommendation": "Page uses motion effects without prefers-reduced-motion support. motion transitions found: [ transform ] To fix: add the following block at the END of your <style> tag — @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } } — Or if using Tailwind, add 'motion-reduce:' variants. This disables animations for users who have enabled reduced motion in their OS settings. DO NOT change any HTML, layout, or color properties.",
+        "affectedSelectors": "html",
+        "fileName": "index.html"
+    },
+]
+
+
+5. References
+
+* Nielsen Norman Group (10 Usability Heuristics): https://www.nngroup.com/articles/ten-usability-heuristics/

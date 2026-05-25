@@ -1,0 +1,104 @@
+GREEN SOFTWARE EVALUATION SETUP & CRITERIA
+
+1. Configuration Setup
+
+The Green Software evaluation is not a standalone tool but a custom evaluation layer built on top of the Lighthouse auditing system. Therefore, it inherits the same configuration parameters used for the standard Lighthouse audit.
+
+Lighthouse Options (Inherited)
+* Version: 13.0.3
+* Emulation Strategy: Desktop (--emulated-form-factor=desktop)
+* Throttling: Default Desktop (No custom network throttling applied)
+* Target Architecture: Front-end Web Pages
+
+Browser & Viewport Config (Desktop Simulation)
+* Dimensions: 1350px width x 940px height (Device Scale Factor = 1)
+* Device Context: Desktop Simulation
+* Chrome Flags: Headless mode, --no-sandbox
+
+2. Evaluation Criteria
+
+The system assesses front-end web sustainability in terms of energy and resource utilization. The criteria are divided into two distinct groups based on the evaluation method:
+
+Group 1: Direct Lighthouse Audits
+This group utilizes the "score" value reported by specific Lighthouse Audit IDs. These audits may return binary (0 or 1), numeric, or metricSavings values.
+* Pass: Score >= 0.9
+* Warning: 0.5 <= Score < 0.9
+* Fail: Score < 0.5
+
+The following practices are evaluated using this method:
+* Avoid Chaining Critical Requests: `network-dependency-tree-insight` (Identifies rendering bottlenecks).
+* Avoid Excessive DOM Size: `dom-size-insight` (Directly measures DOM count and depth).
+* Avoid Unnecessary Tracking: `third-parties-insight` (Summarizes the load from external services).
+* Minify Web Files: `unminified-javascript` (Reduces file size and JS processing time).
+* Reduce Main-thread Work: `mainthread-work-breakdown` (Reports main-thread execution time by task type).
+* Properly Size Images: `image-size-responsive` (Detects oversized images relative to the viewport).
+* Remove Unused CSS: `unused-css-rules` (Reports the proportion of unused CSS).
+* Use Server-Side Rendering for High-Traffic Sites: `server-response-time` (Reflects the response speed of the main content).
+
+Group 2: Calculated Supplemental Metrics
+This group requires raw data extraction from the Lighthouse "Network Requests" and applies custom evaluation logic based on defined thresholds.
+
+* Offscreen Image Lazy Loading (Checks image request Priority):
+  - Pass: Low-priority image requests detected (indicates lazy-load usage).
+  - Fail: All images are requested with high priority immediately.
+* Deprecate GIF for Animated Content (Checks file types in requests):
+  - Pass: No GIF files detected.
+  - Fail: GIF file usage detected.
+* Enable Text Compression (Compares Resource Size vs. Transfer Size):
+  - Pass: All text files are compressed.
+  - Warning: Uncompressed text files detected.
+* Reduce Request Count (Counts total network requests):
+  - Pass: <= 74 requests.
+  - Warning: 75 - 100 requests.
+  - Fail: > 100 requests.
+* Serve Images in Modern Formats (Detects JPEG or PNG usage):
+  - Pass: No JPEG or PNG files detected.
+  - Warning: Legacy image formats (JPEG/PNG) detected.
+
+All evaluation results from both groups are subsequently forwarded to the Quality Gate for filtering and determining which items require remediation in the code refinement module.
+
+3. Experimental Environment & Methodology
+
+All automated evaluations were executed completely in a controlled local environment to eliminate network latency variations from serverless platforms.
+
+Hardware & OS Specifications
+* Machine: Apple Mac running on an Apple M3 chip
+* Memory: 8 GB Unified Memory
+* Operating System: macOS Sequoia 15.7.3
+
+Software & Browser Specifications
+* Browser Engine: Google Chrome (version 147.0)
+* Execution Mode: Automated Headless mode (--no-sandbox)
+* Evaluation Period: April 7 - 11, 2026
+
+Testing Methodology
+* Execution Flow: Automated sequential loop across all targeted web pages.
+* Test Frequency: 1 execution run per page to ensure a single-pass assessment baseline.
+
+4. Example Output
+
+Below is an excerpt of the custom JSON structure representing the Green Software evaluation results, categorized by the two evaluation groups:
+[
+ {
+        "category": "Direct Audit",
+        "metricId": "server-response",
+        "auditId": "server-response-time",
+        "title": "Use Server-Side Rendering for High-Traffic Pages",
+        "status": "Failed",
+        "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/).",
+        "recommendation": "Serve the static site through a CDN with edge caching enabled to reduce network latency and minimize Time to First Byte (TTFB).",
+        "displayValue": "Root document took 1,040 ms"
+    },
+    {
+        "category": "Calculate Metric",
+        "metricId": "image-format-optimization",
+        "title": "Serve Images in Modern Formats",
+        "status": "Warning",
+        "description": "Detected 4 images in legacy formats (JPEG/PNG). Modern image formats such as WebP or AVIF provide better compression ratios, reducing bandwidth, storage, and computing requirements on user devices.",
+        "recommendation": "Evaluate modern image formats such as WebP or AVIF and serve images in the format that provides the best compression ratio, visual quality, and device support to reduce bandwidth and energy consumption.",
+        "displayValue": "4 legacy images"
+    }
+]
+
+5. References
+* Green Software Foundation (General Concepts): https://patterns.greensoftware.foundation/

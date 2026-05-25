@@ -59,17 +59,47 @@ In the project directory, you can run:
 ## Project Structure
 
 ```
-ai-sandbox/
-├── src/
-│   ├── app/                # Next.js App Router (Pages, API Routes, Layouts)
-│   │   ├── api/            # API endpoints (Auth, CodeGen, Heuristics, Lighthouse, etc.)
-│   │   └── components/     # Reusable React components
-│   ├── lib/                # Utility functions, database configuration, and parsing models
-│   └── types/              # TypeScript type definitions
-├── public/                 # Static assets (images, fonts, outputs)
-├── biome.json              # Biome configuration for fast formatting
-├── tailwind.config.ts      # Tailwind CSS configuration
-└── next.config.ts          # Next.js configuration
+## Project Structure
+
+```text
+/ (Root Directory)
+├── /design                                     
+│   ├── /01-prompts                             
+│   │   ├── frontend-code-json-from-system-prompt-code-generation (example).txt        
+│   │   ├── frontend-refinement-prompt (30 prompts)        
+│   │   ├── frontend-requirement-prompt (30 prompts) 
+│   │   ├── system-prompt-code-generation.txt       
+│   │   ├── system-prompt-code-refinement.txt                
+│   │   └── user-prompt-frontend-requirements.txt                      
+│   ├── /02_Lighthouse_Criteria                
+│   │   └── lighthouse-evaluation-setup.txt          
+│   ├── /03_Pa11y_Criteria                    
+│   │   └── pa11y-evaluation-setup.txt
+│   ├── /04-usability-heuristics-criteria      
+│   │   ├── usability-heuristic-evaluation-setup.txt
+│   │   ├── precision-and-recall.csv
+│   │   ├── H01-01-visibility of system status.csv
+│   │   ├── ...
+│   │   └── H10-01-help and documentation.csv
+│   └── /05-green-software-criteria             
+│       └── green-software-evaluation-setup.txt
+│ 
+│── /evaluation                                 
+│   ├── /01-test-scenarios 
+│   └── /02-evaluation-results             
+│             
+└── /itera-web-q-system                      
+   ├── src/
+   │   ├── app/                # Next.js App Router (Pages, API Routes, Layouts)
+   │   │   ├── api/            # API endpoints (Auth, CodeGen, Heuristics, Lighthouse, etc.)
+   │   │   └── components/     # Reusable React components
+   │   ├── lib/                # Utility functions, database configuration, and parsing models
+   │   └── types/              # TypeScript type definitions
+   ├── public/                 # Static assets (images, fonts, outputs)
+   ├── biome.json              # Biome configuration for fast formatting
+   ├── tailwind.config.ts      # Tailwind CSS configuration
+   └── next.config.ts          # Next.js configuration   
+
 ```
 
 ## Environment

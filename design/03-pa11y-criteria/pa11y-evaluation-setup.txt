@@ -1,0 +1,86 @@
+PA11Y EVALUATION SETUP & CRITERIA
+
+1. Configuration Setup
+
+Pa11y Options
+* Version: 9.1.1
+* standard: WCAG2AA (Default)
+* includeWarnings: true
+* includeNotices: false
+* timeoutMs: 60,000 ms (Minimum: 10s)
+* waitMs: 1,000 ms (Maximum: 10s)
+* retries: 1
+
+Browser & Viewport Config (Desktop Simulation)
+* Dimensions: 1350px width x 940px height
+* Device Context: isMobile: false, hasTouch: false
+* Chrome Flags: Headless mode, --no-sandbox, --disable-dev-shm-usage
+
+2. Evaluation Criteria
+
+The system uses the HTML CodeSniffer (htmlcs) test runner to evaluate the HTML DOM against WCAG 2.1 standards.
+
+Compliance Levels (WCAG2AA)
+* Level A: Fundamental accessibility rules (e.g., missing alt text, keyboard navigation support).
+* Level AA: Intermediate accessibility rules (e.g., minimum text color contrast ratio of 4.5:1).
+
+Issue Classifications
+* Error: Definitive WCAG violations.
+* Warning: Potential violations that require manual verification.
+* (Notices are strictly excluded to focus on actionable violations).
+
+3. Experimental Environment & Methodology
+
+All automated evaluations were executed completely in a controlled local environment to eliminate network latency variations from serverless platforms.  
+
+Hardware & OS Specifications
+* Machine: Apple Mac running on an Apple M3 chip
+* Memory: 8 GB Unified Memory
+* Operating System: macOS Sequoia 15.7.3  
+
+Software & Browser Specifications  
+* Browser Engine: Google Chrome (version 147.0)
+* Execution Mode: Automated Headless mode (--no-sandbox)
+* Evaluation Period: April 7 - 11, 2026
+
+Testing Methodology  
+* Execution Flow: Automated sequential loop across all targeted web pages.  
+* Test Frequency: 1 execution run per page to ensure a single-pass assessment baseline. 
+
+4. Example Output
+
+Below is a sample JSON output generated from the evaluation, illustrating how specific accessibility issues (errors and warnings) are structured and reported:
+
+[
+   {
+    "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+    "type": "error",
+    "typeCode": 1,
+    "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.24:1. Recommendation:  change background to #0274e3.",
+    "context": "<a href=\"projects\" class=\"btn\">View My Work</a>",
+    "selector": "html > body > main > section:nth-child(1) > a",
+    "runner": "htmlcs",
+    "runnerExtras": {}
+  },
+  {
+    "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+    "type": "error",
+    "typeCode": 1,
+  
+[Pa11y POST] First element: {
+  "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42",
+  "type": "warning",
+  "typeCode": 2,
+  "message": "Heading markup should be used if this content is intended as a heading.",
+  "context": "<div class=\"brand\"><strong>DevJourney</strong></div>",
+  "selector": "html > body > header > div",
+  "runner": "htmlcs",
+  "runnerExtras": {}
+}
+]
+
+5. References
+
+* Official Document: https://pa11y.org/
+* Pa11y Configuration & Usage: https://github.com/pa11y/pa11y
+* HTML CodeSniffer: https://github.com/squizlabs/HTML_CodeSniffer
