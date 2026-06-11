@@ -4,8 +4,7 @@ LIGHTHOUSE EVALUATION SETUP
 
 Lighthouse Options
 * Version: 13.0.3
-* Emulation Strategy: Desktop (--emulated-form-factor=desktop)
-* Throttling: Default Desktop (No custom network throttling applied)
+* Throttling: Default (No custom network throttling applied)
 * Evaluated Categories: Performance, Accessibility, Best Practices, and SEO
 
 Browser & Viewport Config (Desktop Simulation)

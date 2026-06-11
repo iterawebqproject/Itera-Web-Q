@@ -60,7 +60,7 @@ async function runLH(url: string) {
       "lighthouse",
       url,
       "--quiet",
-      "--emulated-form-factor=desktop",
+      "--preset=desktop",
       "--screenEmulation.width=1350",
       "--screenEmulation.height=940",
       "--screenEmulation.deviceScaleFactor=1",

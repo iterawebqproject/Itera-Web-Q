@@ -6,8 +6,7 @@ The Green Software evaluation is not a standalone tool but a custom evaluation l
 
 Lighthouse Options (Inherited)
 * Version: 13.0.3
-* Emulation Strategy: Desktop (--emulated-form-factor=desktop)
-* Throttling: Default Desktop (No custom network throttling applied)
+* Throttling: Default (No custom network throttling applied)
 * Target Architecture: Front-end Web Pages
 
 Browser & Viewport Config (Desktop Simulation)
